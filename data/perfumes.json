@@ -1,0 +1,116 @@
+[
+  {
+    "id": "club-de-nuit-iconic",
+    "marca": "Armaf",
+    "nombre": "Club de Nuit Iconic",
+    "genero": "masculino",
+    "familia": "fresco",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura cítrica de pomelo, limón y pimienta rosa, corazón especiado de jengibre y jazmín, y un fondo amaderado de sándalo, incienso y pachulí. Fresco pero con cuerpo, ideal de día.",
+    "notas": {
+      "salida": ["Pomelo", "Limón", "Pimienta rosa"],
+      "corazon": ["Jengibre", "Jazmín"],
+      "fondo": ["Sándalo", "Ámbar", "Incienso", "Pachulí"]
+    },
+    "imagen": "/images/productos/ClubDeNuitIconic1.png",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 10490 }
+    ],
+    "destacado": true
+  },
+  {
+    "id": "9pm-night-out",
+    "marca": "Afnan",
+    "nombre": "9pm Night Out",
+    "genero": "masculino",
+    "familia": "oriental",
+    "concentracion": "Extrait de Parfum",
+    "descripcion": "Apertura frutal de pitahaya, bergamota y cognac, corazón especiado de cardamomo con toffee y ante, y un fondo amaderado de haba tonka, pachulí y akigalawood. El clásico para salir de noche, dulce y con muchísimo rastro.",
+    "notas": {
+      "salida": ["Pitahaya", "Bergamota", "Cognac"],
+      "corazon": ["Cardamomo", "Toffee", "Ante"],
+      "fondo": ["Haba tonka", "Pachulí", "Akigalawood"]
+    },
+    "imagen": "/images/productos/9PM1.png",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 10990 }
+    ],
+    "destacado": true
+  },
+  {
+    "id": "hawas-malibu",
+    "marca": "Rasasi",
+    "nombre": "Hawas For Him Malibu",
+    "genero": "masculino",
+    "familia": "fresco",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "La versión veraniega del Hawas original: apertura frutal de piña, naranja y pomelo, corazón floral de lirio con ámbar y lavanda, y un fondo cálido de haba tonka, almizcle y pachulí. Fresco pero con cuerpo.",
+    "notas": {
+      "salida": ["Piña", "Naranja", "Pomelo"],
+      "corazon": ["Lirio", "Ámbar", "Lavanda"],
+      "fondo": ["Haba tonka", "Almizcle", "Pachulí"]
+    },
+    "imagen": "/images/productos/Hawasmalibu1.png",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 9990 }
+    ],
+    "destacado": true
+  },
+  {
+    "id": "the-kingdom",
+    "marca": "Lattafa",
+    "nombre": "The Kingdom",
+    "genero": "masculino",
+    "familia": "ambarado",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura aromática de lavanda y salvia, corazón de tabaco y flor de azahar sobre vainilla, y una base ambarada de haba tonka y benjuí. Dulce, envolvente y con muchísimo cuerpo.",
+    "notas": {
+      "salida": ["Lavanda", "Menta", "Salvia"],
+      "corazon": ["Vainilla", "Tabaco", "Flor de azahar"],
+      "fondo": ["Haba tonka", "Benjuí", "Ládano"]
+    },
+    "imagen": "/images/productos/TheKingdom1.png",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 9990 }
+    ],
+    "destacado": false
+  },
+  {
+    "id": "vulcan-feu",
+    "marca": "French Avenue",
+    "nombre": "Vulcan Feu",
+    "genero": "masculino",
+    "familia": "oriental",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura frutal de mango, jengibre y limón, corazón floral de jazmín, pimienta rosa y praliné, y un fondo cálido de haba tonka, ámbar gris y cedro. Frasco turquesa con el detalle de la serpiente dorada en el cuello.",
+    "notas": {
+      "salida": ["Mango", "Jengibre", "Limón"],
+      "corazon": ["Jazmín", "Pimienta rosa", "Praliné"],
+      "fondo": ["Haba tonka", "Ámbar gris", "Cedro"]
+    },
+    "imagen": "/images/productos/Vulcan1.png",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 10990 }
+    ],
+    "destacado": false
+  },
+  {
+    "id": "uomo-intense",
+    "marca": "Emper",
+    "nombre": "Stallion 53 Uomo Intense",
+    "genero": "masculino",
+    "familia": "amaderado",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura verde de hoja de violeta, pomelo y vainilla, corazón aromático de lavanda, notas marinas y palisandro, y un fondo amaderado de amberwood, ámbar gris y vetiver. Intenso y cálido, pensado para el frío.",
+    "notas": {
+      "salida": ["Hoja de violeta", "Pomelo", "Vainilla"],
+      "corazon": ["Lavanda", "Notas marinas", "Palisandro"],
+      "fondo": ["Amberwood", "Ámbar gris", "Vetiver"]
+    },
+    "imagen": "/images/productos/UOMO1.png",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 9490 }
+    ],
+    "destacado": false
+  }
+]

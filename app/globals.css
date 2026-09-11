@@ -1,26 +1,164 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-paper: #050607;
+  --color-paper-soft: #0d1015;
+  --color-ink: #f2f4f7;
+  --color-ink-soft: #8d9bad;
+  --color-accent: #5b9bd1;
+  --color-accent-dark: #4682b4;
+  --color-glow: #6fa8d8;
+  --color-line: rgba(130, 170, 205, 0.18);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-paper: var(--color-paper);
+  --color-paper-soft: var(--color-paper-soft);
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-accent: var(--color-accent);
+  --color-accent-dark: var(--color-accent-dark);
+  --color-glow: var(--color-glow);
+  --color-line: var(--color-line);
+  --font-display: var(--font-nunito);
+  --font-sans: var(--font-nunito);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background: var(--color-accent-dark);
+  color: var(--color-paper);
+}
+
+.reveal {
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tracked-caps {
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Botones estilo "liquid glass": vidrio esmerilado con brillo superior,
+   inspirados en el material de Apple. .btn-glass es el CTA principal
+   (con tinte del azul de marca), .btn-glass-ghost el secundario/neutro. */
+.btn-glass {
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: linear-gradient(180deg, rgba(111, 168, 216, 0.55), rgba(70, 130, 180, 0.32));
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.18),
+    0 10px 30px -12px rgba(70, 130, 180, 0.55);
+  transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.btn-glass:hover {
+  background: linear-gradient(180deg, rgba(111, 168, 216, 0.68), rgba(70, 130, 180, 0.42));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.18),
+    0 14px 34px -12px rgba(70, 130, 180, 0.65);
+}
+
+.btn-glass-ghost {
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+}
+
+.btn-glass-ghost:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(111, 168, 216, 0.45);
+}
+
+/* Barra de navegación flotante en vidrio: el border-radius se pasa por
+   inline style desde Navbar.js (píldora cerrada / esquinas más rectas
+   con el menú mobile abierto), todo lo demás vive acá. */
+.nav-glass {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.08), rgba(70, 130, 180, 0.05));
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 24px 60px -28px rgba(0, 0, 0, 0.85);
+  transition: border-radius 0.3s ease;
+}
+
+/* Paneles de sección estilo vidrio esmerilado: bien translúcidos, para que
+   el fondo negro y el glow azul sigan respirando detrás del contenido. */
+.panel-glass {
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.06), rgba(70, 130, 180, 0.05));
+  backdrop-filter: blur(26px);
+  -webkit-backdrop-filter: blur(26px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 40px 90px -45px rgba(0, 0, 0, 0.85);
+}
+
+/* Modal de vista rápida (Quick View): vidrio más opaco que .panel-glass
+   para que el texto de la ficha se lea sobre el catálogo desenfocado detrás. */
+.modal-glass {
+  border-radius: 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: linear-gradient(165deg, rgba(13, 16, 21, 0.92), rgba(70, 130, 180, 0.16));
+  backdrop-filter: blur(32px) saturate(160%);
+  -webkit-backdrop-filter: blur(32px) saturate(160%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    0 50px 100px -40px rgba(0, 0, 0, 0.9);
+}
+
+@keyframes drift-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(4%, -6%) scale(1.08); }
+}
+
+@keyframes drift-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-5%, 5%) scale(1.05); }
+}
+
+@keyframes drift-c {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(3%, 4%) scale(1.1); }
 }

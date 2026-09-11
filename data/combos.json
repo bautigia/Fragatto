@@ -1,0 +1,23 @@
+[
+  {
+    "id": "fragatto-night",
+    "nombre": "Fragatto Night",
+    "cantidadDecants": 3,
+    "descripcion": "9pm Night Out (Afnan), The Kingdom (Lattafa) y Uomo Intense: tres fragancias densas y con mucho rastro, pensadas para la noche.",
+    "precio": 30000
+  },
+  {
+    "id": "fragatto-blue",
+    "nombre": "Fragatto Blue",
+    "cantidadDecants": 3,
+    "descripcion": "Hawas For Him Malibu (Rasasi), Club de Nuit Iconic (Armaf) y Vulcan Feu: frescos y versátiles, para el día a día.",
+    "precio": 30000
+  },
+  {
+    "id": "fragatto-collection",
+    "nombre": "Fragatto Collection",
+    "cantidadDecants": 6,
+    "descripcion": "Las 6 fragancias del catálogo, 6 decants de 5ml. La forma de probarlas todas.",
+    "precio": 58000
+  }
+]
