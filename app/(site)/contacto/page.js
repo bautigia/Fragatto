@@ -1,11 +1,16 @@
 import { CONFIG } from "@/lib/config";
+import { registrarVisita } from "@/lib/analytics";
 
 export const metadata = {
   title: "Contacto | Fragatto",
   description: "Coordiná tu pedido de decants por WhatsApp con Fragatto.",
 };
 
+export const revalidate = 0;
+
 export default function ContactoPage() {
+  registrarVisita("contacto");
+
   return (
     <div className="mx-auto max-w-3xl px-6 py-16 lg:px-10 lg:py-24">
       <span className="text-xs uppercase tracking-[0.16em] text-accent">Contacto</span>

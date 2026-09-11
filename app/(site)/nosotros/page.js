@@ -1,13 +1,18 @@
 import Image from "next/image";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import ScrollParallax from "@/components/ScrollParallax";
+import { registrarVisita } from "@/lib/analytics";
 
 export const metadata = {
   title: "Nosotros | Fragatto",
   description: "La historia y la filosofía detrás de Fragatto, perfumería de nicho y decants.",
 };
 
+export const revalidate = 0;
+
 export default function NosotrosPage() {
+  registrarVisita("nosotros");
+
   return (
     <div className="flex flex-col">
       <section className="relative flex h-[60vh] min-h-[420px] items-end overflow-hidden">

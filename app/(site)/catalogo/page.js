@@ -4,6 +4,7 @@ import ComboCard from "@/components/ComboCard";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { getAllProducts } from "@/lib/catalog";
 import { getAllCombos } from "@/lib/combos";
+import { registrarVisita } from "@/lib/analytics";
 
 export const metadata = {
   title: "Catálogo | Fragatto",
@@ -13,6 +14,7 @@ export const metadata = {
 export const revalidate = 0;
 
 export default async function CatalogoPage() {
+  registrarVisita("catalogo");
   const [productos, combos] = await Promise.all([getAllProducts(), getAllCombos()]);
 
   return (

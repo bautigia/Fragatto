@@ -36,3 +36,20 @@ create policy "escritura admin formatos" on formato_precio_stock
 
 create policy "escritura admin combos" on combo_precio_stock
   for all using (auth.role() = 'authenticated') with check (auth.role() = 'authenticated');
+
+-- Contador de visitas (ver migration_page_views.sql si ya corriste lo de arriba
+-- antes y solo te falta esto).
+create table if not exists page_views (
+  id bigserial primary key,
+  tipo text not null,
+  producto_id text,
+  created_at timestamptz not null default now()
+);
+
+alter table page_views enable row level security;
+
+create policy "insert publico visitas" on page_views
+  for insert with check (tipo in ('home', 'catalogo', 'producto', 'nosotros', 'contacto'));
+
+create policy "lectura admin visitas" on page_views
+  for select using (auth.role() = 'authenticated');

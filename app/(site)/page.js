@@ -4,6 +4,7 @@ import ComboCard from "@/components/ComboCard";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { IconPerfume, IconDecant, IconCombo, IconEnvio, IconShieldCheck, IconSearch, IconBriefcase, IconDollar } from "@/components/icons";
 import { getAllCombos } from "@/lib/combos";
+import { registrarVisita } from "@/lib/analytics";
 
 export const revalidate = 0;
 
@@ -42,6 +43,7 @@ const PASOS = [
 ];
 
 export default async function Home() {
+  registrarVisita("home");
   const combos = await getAllCombos();
 
   return (

@@ -2,8 +2,10 @@ import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { getAllProducts } from "@/lib/catalog";
 import { getAllCombos } from "@/lib/combos";
+import { getVisitStats } from "@/lib/analytics";
 import { signOut } from "@/app/admin/actions";
 import AdminCatalogo from "@/components/admin/AdminCatalogo";
+import VisitStats from "@/components/admin/VisitStats";
 
 export const revalidate = 0;
 
@@ -14,7 +16,11 @@ export default async function AdminPage() {
   } = await supabase.auth.getUser();
   if (!user) redirect("/admin/login");
 
-  const [productos, combos] = await Promise.all([getAllProducts(), getAllCombos()]);
+  const [productos, combos, visitas] = await Promise.all([
+    getAllProducts(),
+    getAllCombos(),
+    getVisitStats(),
+  ]);
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-10">
@@ -32,6 +38,8 @@ export default async function AdminPage() {
           </button>
         </form>
       </div>
+
+      <VisitStats visitas={visitas} productos={productos} />
 
       <AdminCatalogo productos={productos} combos={combos} />
     </div>
