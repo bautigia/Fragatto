@@ -5,6 +5,7 @@ import RevealOnScroll from "@/components/RevealOnScroll";
 import { getAllProducts } from "@/lib/catalog";
 import { getAllCombos } from "@/lib/combos";
 import { registrarVisita } from "@/lib/analytics";
+import { CONFIG } from "@/lib/config";
 
 export const metadata = {
   title: "Catálogo | Fragatto",
@@ -16,6 +17,7 @@ export const revalidate = 0;
 export default async function CatalogoPage() {
   registrarVisita("catalogo");
   const [productos, combos] = await Promise.all([getAllProducts(), getAllCombos()]);
+  const whatsappEncargoHref = CONFIG.urlWhatsapp(CONFIG.mensajeWhatsappEncargo());
 
   return (
     <div className="relative">
@@ -58,6 +60,33 @@ export default async function CatalogoPage() {
               {combos.map((combo) => (
                 <ComboCard key={combo.id} combo={combo} />
               ))}
+            </div>
+          </section>
+        </RevealOnScroll>
+
+        <RevealOnScroll>
+          <section
+            id="pedido-por-encargo"
+            className="panel-glass mt-16 scroll-mt-28 px-6 py-12 lg:px-10 lg:py-14"
+          >
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
+              <div className="flex flex-col gap-3">
+                <h2 className="font-display text-2xl leading-tight tracked-caps text-ink lg:text-3xl">
+                  ¿No encontraste tu fragancia?
+                </h2>
+                <p className="max-w-[48ch] text-ink-soft">
+                  Si buscás un perfume que no está en el catálogo, contanos cuál es. Lo conseguimos y te
+                  avisamos apenas esté listo.
+                </p>
+              </div>
+              <a
+                href={whatsappEncargoHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-glass inline-flex shrink-0 px-6 py-3 text-sm font-medium text-ink transition-transform duration-200 hover:-translate-y-0.5 active:scale-[0.98]"
+              >
+                Pedila por WhatsApp
+              </a>
             </div>
           </section>
         </RevealOnScroll>

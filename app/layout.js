@@ -10,7 +10,7 @@ const nunitoSans = Nunito_Sans({
 export const metadata = {
   title: "Fragatto | Perfumes & Decants",
   description:
-    "Probá. Elegí. Descubrí. Decants de 5ml y perfumes 100% originales, con envíos a todo el país.",
+    "Probá. Descubrí. Elegí. Decants de 5ml y perfumes 100% originales, con envíos a todo el país.",
 };
 
 export default function RootLayout({ children }) {

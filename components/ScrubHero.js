@@ -183,7 +183,7 @@ export default function ScrubHero() {
         <div className="relative z-10 mx-auto w-full max-w-6xl px-6 lg:px-10">
           <div className="flex max-w-2xl flex-col gap-6">
             <span ref={kickerRef} className="text-xs tracked-caps text-accent" style={{ opacity: 0 }}>
-              Probá. Elegí. Descubrí.
+              Probá. Descubrí. Elegí.
             </span>
             <h1
               ref={headlineRef}

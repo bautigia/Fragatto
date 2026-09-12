@@ -13,6 +13,7 @@ const LINKS = [
   { href: "/catalogo", label: "Catálogo" },
   { href: "/nosotros", label: "Nosotros" },
   { href: "/contacto", label: "Contacto" },
+  { href: "/catalogo#pedido-por-encargo", label: "Pedí tu fragancia" },
 ];
 
 export default function Navbar() {
