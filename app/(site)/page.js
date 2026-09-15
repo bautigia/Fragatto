@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ScrubHero from "@/components/ScrubHero";
+import Decant3D from "@/components/Decant3D";
 import ComboCard from "@/components/ComboCard";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { IconPerfume, IconDecant, IconCombo, IconEnvio, IconShieldCheck, IconSearch, IconBriefcase, IconDollar } from "@/components/icons";
@@ -67,9 +68,14 @@ export default async function Home() {
       <RevealOnScroll direction="right">
         <section className={`mx-auto max-w-6xl px-6 py-14 lg:px-14 lg:py-20 ${PANEL}`}>
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
-            <h2 className="font-display text-3xl leading-tight tracked-caps text-ink">
-              ¿Qué es un <span className="text-accent">decant</span>?
-            </h2>
+            <div className="flex flex-col gap-6">
+              <h2 className="font-display text-3xl leading-tight tracked-caps text-ink">
+                ¿Qué es un <span className="text-accent">decant</span>?
+              </h2>
+              <div className="aspect-square w-full max-w-xs self-center overflow-hidden rounded-2xl border border-line lg:self-start">
+                <Decant3D />
+              </div>
+            </div>
             <div className="flex flex-col gap-6">
               <p className="text-ink-soft">
                 Un decant es una pequeña cantidad de <span className="text-accent">perfume original</span>,{" "}

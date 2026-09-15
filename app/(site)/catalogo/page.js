@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ProductCard from "@/components/ProductCard";
+import CatalogoClient from "@/components/CatalogoClient";
 import ComboCard from "@/components/ComboCard";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { getAllProducts } from "@/lib/catalog";
@@ -30,23 +30,10 @@ export default async function CatalogoPage() {
         <div className="mb-10 flex flex-col gap-3">
           <span className="text-xs uppercase tracking-[0.16em] text-accent">Catálogo</span>
           <h1 className="font-display text-4xl leading-tight tracked-caps text-ink">Todos los perfumes</h1>
-          <p className="max-w-[60ch] text-ink-soft">
-            {productos.length} perfumes disponibles en decant, listos para sumar a tu selección.
-          </p>
+          <p className="max-w-[60ch] text-ink-soft">Elegí el formato que buscás.</p>
         </div>
 
-        <div className="mb-6 flex flex-col gap-2">
-          <span className="text-xs tracked-caps text-accent">Perfumes</span>
-          <h2 className="font-display text-2xl leading-tight tracked-caps text-ink">Todo el catálogo</h2>
-        </div>
-
-        <div className="grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
-          {productos.map((producto, i) => (
-            <RevealOnScroll key={producto.id} delay={(i % 3) * 90}>
-              <ProductCard producto={producto} />
-            </RevealOnScroll>
-          ))}
-        </div>
+        <CatalogoClient productos={productos} />
 
         <RevealOnScroll>
           <section className="mt-16">

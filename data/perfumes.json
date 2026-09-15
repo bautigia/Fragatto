@@ -112,5 +112,180 @@
       { "ml": 5, "tipo": "decant", "precio": 9490 }
     ],
     "destacado": false
+  },
+  {
+    "id": "club-de-nuit-maleka",
+    "marca": "Armaf",
+    "nombre": "Club de Nuit Maleká",
+    "genero": "femenino",
+    "familia": "floral",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura frutal de lychee, bergamota y pimienta rosa, un corazón de lirio y un fondo goloso de praliné, ambroxán y sándalo. Floral afrutado, cremoso y luminoso, la incorporación femenina de la línea Club de Nuit creada por el perfumista Olivier Cresp.",
+    "notas": {
+      "salida": ["Lychee", "Bergamota", "Pimienta rosa"],
+      "corazon": ["Lirio"],
+      "fondo": ["Praliné", "Ambroxán", "Sándalo"]
+    },
+    "imagen": "/images/productos/ClubdenuitMaleka.png",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 11490 }
+    ],
+    "destacado": false
+  },
+  {
+    "id": "club-de-nuit-untold",
+    "marca": "Armaf",
+    "nombre": "Club de Nuit Untold",
+    "genero": "unisex",
+    "familia": "ambarado",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura especiada de azafrán y jazmín, corazón ambarado de ámbar gris y madera de ámbar, y un fondo resinoso de abeto y cedro. Denso, sofisticado y con mucho cuerpo, pensado para la noche.",
+    "notas": {
+      "salida": ["Azafrán", "Jazmín"],
+      "corazon": ["Ámbar gris", "Madera de ámbar"],
+      "fondo": ["Resina de abeto", "Cedro"]
+    },
+    "imagen": "/images/productos/ClubdenuitUntold.png",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 10990 },
+      { "ml": 105, "tipo": "frasco completo", "precio": null }
+    ],
+    "destacado": false
+  },
+  {
+    "id": "hawas-black",
+    "marca": "Rasasi",
+    "nombre": "Hawas For Him Black",
+    "genero": "masculino",
+    "familia": "amaderado",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura frutal de piña, pomelo y bergamota, corazón amaderado de cedro, pachulí y jazmín, y un fondo de musgo de roble, maderas y ámbar. La versión más oscura y con más cuerpo de Hawas.",
+    "notas": {
+      "salida": ["Piña", "Pomelo", "Bergamota"],
+      "corazon": ["Cedro", "Pachulí", "Jazmín"],
+      "fondo": ["Musgo de roble", "Maderas", "Ámbar"]
+    },
+    "imagen": "/images/productos/HawasBlack.png",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 10990 },
+      { "ml": 100, "tipo": "frasco completo", "precio": null }
+    ],
+    "destacado": false
+  },
+  {
+    "id": "hawas-verde",
+    "marca": "Rasasi",
+    "nombre": "Hawas For Him Verde",
+    "genero": "masculino",
+    "familia": "fresco",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura cítrica de lima y romero, corazón verde de manzana, y un fondo de pachulí y ámbar. Fresco, herbáceo y directo, para el día a día.",
+    "notas": {
+      "salida": ["Lima", "Romero"],
+      "corazon": ["Manzana verde"],
+      "fondo": ["Pachulí", "Ámbar"]
+    },
+    "imagen": "/images/productos/HawasVerde.png",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 10990 }
+    ],
+    "destacado": false
+  },
+  {
+    "id": "rayhaan-aquatica",
+    "marca": "Rayhaan",
+    "nombre": "Aquatica",
+    "genero": "masculino",
+    "familia": "fresco",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura tropical de coco, lima, bergamota y mandarina, corazón floral de jengibre, ylang-ylang, jazmín e hibisco, y un fondo de ron blanco, caña de azúcar y almizcle. Fresco y veraniego, evoca el mar.",
+    "notas": {
+      "salida": ["Coco", "Lima", "Bergamota", "Mandarina"],
+      "corazon": ["Jengibre", "Ylang-ylang", "Jazmín", "Hibisco"],
+      "fondo": ["Ron blanco", "Caña de azúcar", "Almizcle"]
+    },
+    "imagen": "/images/productos/RayhaanAcuatica.png",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 10490 },
+      { "ml": 100, "tipo": "frasco completo", "precio": null }
+    ],
+    "destacado": false
+  },
+  {
+    "id": "rayhaan-corium",
+    "marca": "Rayhaan",
+    "nombre": "Corium",
+    "genero": "masculino",
+    "familia": "amaderado",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura de castaña, especias y elemí, corazón aromático de salvia y lavanda, y un fondo de vainilla, oud, madera de guayaco y cuero. Potente y con carácter, de la Leather Collection.",
+    "notas": {
+      "salida": ["Castaña", "Especias", "Elemí"],
+      "corazon": ["Salvia", "Lavanda"],
+      "fondo": ["Vainilla", "Oud", "Madera de guayaco", "Cuero"]
+    },
+    "imagen": "/images/productos/RayhaanCorium.png",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 11990 }
+    ],
+    "destacado": false
+  },
+  {
+    "id": "rayhaan-italia",
+    "marca": "Rayhaan",
+    "nombre": "Italia Pour Homme",
+    "genero": "masculino",
+    "familia": "oriental",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura fresca de lavanda, bergamota y limón, corazón dulce y especiado de miel, canela, cashmerán y jazmín sambac, y un fondo de tabaco, vainilla y haba tonka. Cálido y sofisticado, con el mármol como sello.",
+    "notas": {
+      "salida": ["Lavanda", "Bergamota", "Limón"],
+      "corazon": ["Miel", "Canela", "Cashmerán", "Jazmín sambac"],
+      "fondo": ["Tabaco", "Vainilla", "Haba tonka"]
+    },
+    "imagen": "/images/productos/RayhaanItalia.png",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 11490 }
+    ],
+    "destacado": false
+  },
+  {
+    "id": "rayhaan-wolf",
+    "marca": "Rayhaan",
+    "nombre": "Wolf",
+    "genero": "masculino",
+    "familia": "ambarado",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura especiada de cardamomo, un corazón goloso de toffee, y un fondo amaderado de amberwood. Cálido, dulce y magnético, con la fiera grabada en el frasco.",
+    "notas": {
+      "salida": ["Cardamomo"],
+      "corazon": ["Toffee"],
+      "fondo": ["Amberwood"]
+    },
+    "imagen": "/images/productos/RayhaanWolf.png",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 12490 }
+    ],
+    "destacado": false
+  },
+  {
+    "id": "hawas-tropical",
+    "marca": "Rasasi",
+    "nombre": "Hawas For Him Tropical",
+    "genero": "masculino",
+    "familia": "afrutado",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura de agua de coco, hoja de higuera y jengibre, corazón frutal de coco, higo y menta, y un fondo de sándalo, haba tonka y almizcle. Tropical y jugoso, pensado para el verano.",
+    "notas": {
+      "salida": ["Agua de coco", "Hoja de higuera", "Jengibre"],
+      "corazon": ["Coco", "Higo", "Menta"],
+      "fondo": ["Sándalo", "Haba tonka", "Almizcle"]
+    },
+    "imagen": "/images/productos/Hawastropical1.png",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 9990 },
+      { "ml": 100, "tipo": "frasco completo", "precio": null }
+    ],
+    "destacado": false
   }
 ]

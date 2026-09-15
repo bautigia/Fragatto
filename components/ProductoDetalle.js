@@ -29,13 +29,14 @@ function GrupoNotas({ titulo, notas }) {
 }
 
 export default function ProductoDetalle({ producto }) {
-  const primerDisponible = producto.formatos.findIndex((f) => f.stock !== 0);
+  const primerDisponible = producto.formatos.findIndex((f) => f.stock !== 0 && f.precio != null);
   const [formatoIndex, setFormatoIndex] = useState(Math.max(0, primerDisponible));
   const [cantidad, setCantidad] = useState(1);
   const { addItem } = useCart();
 
   const formato = producto.formatos[formatoIndex];
-  const agotado = formato.stock === 0;
+  const proximamente = formato.precio == null;
+  const agotado = !proximamente && formato.stock === 0;
 
   function handleAgregar() {
     addItem({
@@ -91,23 +92,28 @@ export default function ProductoDetalle({ producto }) {
         <div className="flex flex-col gap-3">
           <span className="text-xs uppercase tracking-[0.14em] text-ink-soft">Elegí tu formato</span>
           <div className="flex flex-wrap gap-2">
-            {producto.formatos.map((f, i) => (
-              <button
-                key={`${f.ml}-${f.tipo}`}
-                onClick={() => setFormatoIndex(i)}
-                disabled={f.stock === 0}
-                className={`rounded-full border px-4 py-2 text-sm transition-colors ${
-                  f.stock === 0
-                    ? "cursor-not-allowed border-line text-ink-soft/50"
-                    : i === formatoIndex
-                      ? "border-accent bg-accent text-paper"
-                      : "border-line text-ink-soft hover:border-accent hover:text-accent"
-                }`}
-              >
-                {f.tipo === "decant" ? "Decant" : "Frasco"} {f.ml}ml · {formatPrecio(f.precio)}
-                {f.stock === 0 && " · Agotado"}
-              </button>
-            ))}
+            {producto.formatos.map((f, i) => {
+              const fProximamente = f.precio == null;
+              const fAgotado = !fProximamente && f.stock === 0;
+              return (
+                <button
+                  key={`${f.ml}-${f.tipo}`}
+                  onClick={() => setFormatoIndex(i)}
+                  disabled={fAgotado || fProximamente}
+                  className={`rounded-full border px-4 py-2 text-sm transition-colors ${
+                    fAgotado || fProximamente
+                      ? "cursor-not-allowed border-line text-ink-soft/50"
+                      : i === formatoIndex
+                        ? "border-accent bg-accent text-paper"
+                        : "border-line text-ink-soft hover:border-accent hover:text-accent"
+                  }`}
+                >
+                  {f.tipo === "decant" ? "Decant" : "Frasco"} {f.ml}ml ·{" "}
+                  {fProximamente ? "Próximamente" : formatPrecio(f.precio)}
+                  {fAgotado && " · Agotado"}
+                </button>
+              );
+            })}
           </div>
         </div>
 
@@ -132,13 +138,13 @@ export default function ProductoDetalle({ producto }) {
 
           <button
             onClick={handleAgregar}
-            disabled={agotado}
+            disabled={agotado || proximamente}
             className="btn-glass px-6 py-3 text-sm font-medium text-ink transition-transform duration-200 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50"
           >
-            {agotado ? "Agotado" : "Agregar a mi selección"}
+            {proximamente ? "Próximamente" : agotado ? "Agotado" : "Agregar a mi selección"}
           </button>
 
-          {!agotado && (
+          {!agotado && !proximamente && (
             <a
               href={whatsappHref}
               target="_blank"

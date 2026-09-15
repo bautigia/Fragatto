@@ -1,0 +1,9 @@
+{
+  "name": "run-fragatto-driver",
+  "private": true,
+  "type": "module",
+  "description": "Agent tooling only - drives the Fragatto Next.js site with a headless browser. Not part of the site's own dependency tree.",
+  "dependencies": {
+    "playwright": "1.63.0"
+  }
+}
