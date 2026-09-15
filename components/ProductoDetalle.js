@@ -6,6 +6,7 @@ import BottleIllustration from "./BottleIllustration";
 import { colorDeFamilia } from "@/lib/familias";
 import { formatPrecio } from "@/lib/products";
 import { iconoDeNota } from "@/lib/notas";
+import { IconDecant } from "./icons";
 import { useCart } from "@/context/CartContext";
 import { CONFIG } from "@/lib/config";
 
@@ -37,6 +38,9 @@ export default function ProductoDetalle({ producto }) {
   const formato = producto.formatos[formatoIndex];
   const proximamente = formato.precio == null;
   const agotado = !proximamente && formato.stock === 0;
+  const tieneFrascoComprable = producto.formatos.some(
+    (f) => f.tipo === "frasco completo" && f.precio != null
+  );
 
   function handleAgregar() {
     addItem({
@@ -116,6 +120,15 @@ export default function ProductoDetalle({ producto }) {
             })}
           </div>
         </div>
+
+        {tieneFrascoComprable && (
+          <div className="flex items-center gap-3 rounded-2xl border border-line bg-paper/60 px-5 py-4">
+            <IconDecant className="h-6 w-6 shrink-0 text-accent" />
+            <p className="text-sm text-ink-soft">
+              <span className="text-ink">El frasco completo incluye un decant de regalo.</span>
+            </p>
+          </div>
+        )}
 
         <div className="flex flex-wrap items-center gap-4">
           <div className="flex items-center gap-3 rounded-full border border-line px-4 py-2">

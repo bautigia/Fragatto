@@ -33,7 +33,8 @@
     },
     "imagen": "/images/productos/9PM1.png",
     "formatos": [
-      { "ml": 5, "tipo": "decant", "precio": 10990 }
+      { "ml": 5, "tipo": "decant", "precio": 10990 },
+      { "ml": 100, "tipo": "frasco completo", "precio": 115000 }
     ],
     "destacado": true
   },
@@ -90,7 +91,8 @@
     },
     "imagen": "/images/productos/Vulcan1.png",
     "formatos": [
-      { "ml": 5, "tipo": "decant", "precio": 10990 }
+      { "ml": 5, "tipo": "decant", "precio": 10990 },
+      { "ml": 100, "tipo": "frasco completo", "precio": 95000 }
     ],
     "destacado": false
   },
@@ -148,7 +150,7 @@
     "imagen": "/images/productos/ClubdenuitUntold.png",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 10990 },
-      { "ml": 105, "tipo": "frasco completo", "precio": null }
+      { "ml": 105, "tipo": "frasco completo", "precio": 90000 }
     ],
     "destacado": false
   },
@@ -168,7 +170,7 @@
     "imagen": "/images/productos/HawasBlack.png",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 10990 },
-      { "ml": 100, "tipo": "frasco completo", "precio": null }
+      { "ml": 100, "tipo": "frasco completo", "precio": 95000 }
     ],
     "destacado": false
   },
@@ -207,7 +209,7 @@
     "imagen": "/images/productos/RayhaanAcuatica.png",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 10490 },
-      { "ml": 100, "tipo": "frasco completo", "precio": null }
+      { "ml": 100, "tipo": "frasco completo", "precio": 85000 }
     ],
     "destacado": false
   },
@@ -284,7 +286,7 @@
     "imagen": "/images/productos/Hawastropical1.png",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 9990 },
-      { "ml": 100, "tipo": "frasco completo", "precio": null }
+      { "ml": 100, "tipo": "frasco completo", "precio": 85000 }
     ],
     "destacado": false
   }
