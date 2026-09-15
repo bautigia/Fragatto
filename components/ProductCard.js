@@ -62,6 +62,7 @@ export default function ProductCard({ producto }) {
               alt={`${producto.nombre} de ${producto.marca}`}
               width={520}
               height={520}
+              sizes="(min-width: 1024px) 33vw, 50vw"
               className="h-full w-auto rounded-xl object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.6)]"
             />
           ) : (
