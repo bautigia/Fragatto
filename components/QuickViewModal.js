@@ -39,6 +39,9 @@ export default function QuickViewModal() {
         className={`fixed inset-0 z-50 flex items-center justify-center overflow-y-auto p-4 py-10 ${
           isOpen ? "" : "pointer-events-none"
         }`}
+        onClick={(e) => {
+          if (e.target === e.currentTarget) closeQuickView();
+        }}
       >
         {producto && (
           <div

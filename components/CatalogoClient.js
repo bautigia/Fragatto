@@ -65,7 +65,7 @@ export default function CatalogoClient({ productos }) {
         <div className="grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
           {productosFiltrados.map((producto, i) => (
             <RevealOnScroll key={producto.id} delay={(i % 3) * 90}>
-              <ProductCard producto={producto} />
+              <ProductCard producto={producto} mostrarPrecioFrasco={filtro === "frasco" || filtro === "ambos"} />
             </RevealOnScroll>
           ))}
         </div>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import ScrubHero from "@/components/ScrubHero";
 import Decant3D from "@/components/Decant3D";
-import ComboCard from "@/components/ComboCard";
+import ComboCarousel from "@/components/ComboCarousel";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { IconPerfume, IconDecant, IconCombo, IconEnvio, IconShieldCheck, IconSearch, IconBriefcase, IconDollar } from "@/components/icons";
 import { getAllCombos } from "@/lib/combos";
@@ -133,11 +133,7 @@ export default async function Home() {
               Ver catálogo completo →
             </Link>
           </div>
-          <div className="grid gap-6 sm:grid-cols-3">
-            {combos.map((combo) => (
-              <ComboCard key={combo.id} combo={combo} />
-            ))}
-          </div>
+          <ComboCarousel combos={combos} />
         </section>
       </RevealOnScroll>
     </div>

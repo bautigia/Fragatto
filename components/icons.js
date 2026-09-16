@@ -73,6 +73,22 @@ export function IconBriefcase(props) {
   );
 }
 
+export function IconChevronLeft(props) {
+  return (
+    <svg {...base(props)}>
+      <path d="M15 4.5 7.5 12l7.5 7.5" />
+    </svg>
+  );
+}
+
+export function IconChevronRight(props) {
+  return (
+    <svg {...base(props)}>
+      <path d="M9 4.5 16.5 12 9 19.5" />
+    </svg>
+  );
+}
+
 export function IconDollar(props) {
   return (
     <svg {...base(props)}>

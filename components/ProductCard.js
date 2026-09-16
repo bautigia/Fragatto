@@ -5,15 +5,16 @@ import Link from "next/link";
 import Image from "next/image";
 import BottleIllustration from "./BottleIllustration";
 import { colorDeFamilia } from "@/lib/familias";
-import { precioDesde, formatPrecio } from "@/lib/products";
+import { precioDesde, precioFrascoCompleto, formatPrecio } from "@/lib/products";
 import { useQuickView } from "@/context/QuickViewContext";
 
-export default function ProductCard({ producto }) {
+export default function ProductCard({ producto, mostrarPrecioFrasco = false }) {
   const panelRef = useRef(null);
   const tiltRef = useRef(null);
   const glowRef = useRef(null);
   const { openQuickView } = useQuickView();
   const desde = precioDesde(producto);
+  const precioFrasco = mostrarPrecioFrasco ? precioFrascoCompleto(producto) : null;
 
   function handleClick(e) {
     if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
@@ -86,6 +87,11 @@ export default function ProductCard({ producto }) {
         <p className="mt-1 text-xs text-ink-soft sm:text-sm">
           {desde === null ? "Agotado" : `Desde ${formatPrecio(desde)}`}
         </p>
+        {precioFrasco !== null && (
+          <p className="text-xs text-ink-soft sm:text-sm">
+            Frasco completo: {formatPrecio(precioFrasco)}
+          </p>
+        )}
       </div>
     </Link>
   );

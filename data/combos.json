@@ -1,5 +1,26 @@
 [
   {
+    "id": "fragatto-her",
+    "nombre": "Fragatto Her",
+    "cantidadDecants": 3,
+    "descripcion": "Club de Nuit Maleká (Armaf), Club de Nuit Untold (Armaf) y Hawas For Him Tropical (Rasasi): floral goloso, ambarado y tropical, tres perfiles bien distintos en un mismo combo.",
+    "precio": 30000
+  },
+  {
+    "id": "fragatto-summer",
+    "nombre": "Fragatto Summer",
+    "cantidadDecants": 3,
+    "descripcion": "Hawas For Him Tropical (Rasasi), Aquatica (Rayhaan) y Hawas For Him Verde (Rasasi): frescos, cítricos y veraniegos, para el calor.",
+    "precio": 30000
+  },
+  {
+    "id": "fragatto-dark",
+    "nombre": "Fragatto Dark",
+    "cantidadDecants": 3,
+    "descripcion": "Hawas For Him Black (Rasasi), Wolf (Rayhaan) y Club de Nuit Untold (Armaf): amaderados, densos y con mucho cuerpo, para la noche.",
+    "precio": 32000
+  },
+  {
     "id": "fragatto-night",
     "nombre": "Fragatto Night",
     "cantidadDecants": 3,
@@ -19,5 +40,12 @@
     "cantidadDecants": 6,
     "descripcion": "Las 6 fragancias del catálogo, 6 decants de 5ml. La forma de probarlas todas.",
     "precio": 58000
+  },
+  {
+    "id": "fragatto-full-collection",
+    "nombre": "Fragatto Full Collection",
+    "cantidadDecants": 7,
+    "descripcion": "Hawas For Him Tropical, Aquatica, Hawas For Him Verde, Club de Nuit Maleká, Club de Nuit Untold, Hawas For Him Black y Wolf: las 7 fragancias nuevas del catálogo, 7 decants de 5ml para probarlas todas.",
+    "precio": 70000
   }
 ]

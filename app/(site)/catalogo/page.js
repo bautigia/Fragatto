@@ -1,6 +1,6 @@
 import Image from "next/image";
 import CatalogoClient from "@/components/CatalogoClient";
-import ComboCard from "@/components/ComboCard";
+import ComboCarousel from "@/components/ComboCarousel";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { getAllProducts } from "@/lib/catalog";
 import { getAllCombos } from "@/lib/combos";
@@ -43,11 +43,7 @@ export default async function CatalogoPage() {
                 Armados pensados para vos
               </h2>
             </div>
-            <div className="grid gap-6 sm:grid-cols-3">
-              {combos.map((combo) => (
-                <ComboCard key={combo.id} combo={combo} />
-              ))}
-            </div>
+            <ComboCarousel combos={combos} />
           </section>
         </RevealOnScroll>
 
