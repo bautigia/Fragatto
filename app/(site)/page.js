@@ -2,6 +2,7 @@ import Link from "next/link";
 import ScrubHero from "@/components/ScrubHero";
 import Decant3D from "@/components/Decant3D";
 import ComboCarousel from "@/components/ComboCarousel";
+import PromoMarquee from "@/components/PromoMarquee";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { IconPerfume, IconDecant, IconCombo, IconEnvio, IconShieldCheck, IconSearch, IconBriefcase, IconDollar } from "@/components/icons";
 import { getAllCombos } from "@/lib/combos";
@@ -103,6 +104,10 @@ export default async function Home() {
             </div>
           </div>
         </section>
+      </RevealOnScroll>
+
+      <RevealOnScroll direction="up">
+        <PromoMarquee />
       </RevealOnScroll>
 
       <RevealOnScroll direction="left">

@@ -92,6 +92,14 @@ const COMMANDS = {
     catch (e) { console.log('click', sel, '-> ERROR:', e.message.split('\n')[0]); }
   },
 
+  // Real pointer hover (moves Playwright's virtual mouse there), unlike a
+  // page.evaluate() dispatchEvent of mouseenter which never sets CSS :hover.
+  async hover(sel) {
+    if (!page) return console.log('ERROR: launch first');
+    try { await page.hover(sel, { timeout: 5000 }); console.log('hover', sel, '-> OK'); }
+    catch (e) { console.log('hover', sel, '-> ERROR:', e.message.split('\n')[0]); }
+  },
+
   async 'click-text'(text) {
     if (!page) return console.log('ERROR: launch first');
     try { await page.getByText(text, { exact: false }).first().click({ timeout: 5000 }); console.log('click-text', JSON.stringify(text), '-> OK'); }

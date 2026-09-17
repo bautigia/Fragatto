@@ -13,6 +13,7 @@
       "fondo": ["Sándalo", "Ámbar", "Incienso", "Pachulí"]
     },
     "imagen": "/images/productos/ClubDeNuitIconic1.png",
+    "imagenHover": "/images/productos/Clubdenuit2dafoto.png",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 10490 }
     ],
@@ -32,6 +33,7 @@
       "fondo": ["Haba tonka", "Pachulí", "Akigalawood"]
     },
     "imagen": "/images/productos/9PM1.png",
+    "imagenHover": "/images/productos/9PM2daimagen.png",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 10990 },
       { "ml": 100, "tipo": "frasco completo", "precio": 115000 }
@@ -52,6 +54,7 @@
       "fondo": ["Haba tonka", "Almizcle", "Pachulí"]
     },
     "imagen": "/images/productos/Hawasmalibu1.png",
+    "imagenHover": "/images/productos/Hawas2dafoto.png",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 9990 }
     ],
@@ -71,6 +74,7 @@
       "fondo": ["Haba tonka", "Benjuí", "Ládano"]
     },
     "imagen": "/images/productos/TheKingdom1.png",
+    "imagenHover": "/images/productos/Thekindom2dafoto.png",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 9990 }
     ],
@@ -90,6 +94,7 @@
       "fondo": ["Haba tonka", "Ámbar gris", "Cedro"]
     },
     "imagen": "/images/productos/Vulcan1.png",
+    "imagenHover": "/images/productos/Vulcan2dafoto.png",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 10990 },
       { "ml": 100, "tipo": "frasco completo", "precio": 95000 }
@@ -110,6 +115,7 @@
       "fondo": ["Amberwood", "Ámbar gris", "Vetiver"]
     },
     "imagen": "/images/productos/UOMO1.png",
+    "imagenHover": "/images/productos/Uomo2dafoto.png",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 9490 }
     ],
@@ -129,6 +135,7 @@
       "fondo": ["Praliné", "Ambroxán", "Sándalo"]
     },
     "imagen": "/images/productos/ClubdenuitMaleka.png",
+    "imagenHover": "/images/productos/Maleka2dafoto.png",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 11490 }
     ],
@@ -148,6 +155,7 @@
       "fondo": ["Resina de abeto", "Cedro"]
     },
     "imagen": "/images/productos/ClubdenuitUntold.png",
+    "imagenHover": "/images/productos/Untold2dafoto.png",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 10990 },
       { "ml": 105, "tipo": "frasco completo", "precio": 90000 }
@@ -168,6 +176,7 @@
       "fondo": ["Musgo de roble", "Maderas", "Ámbar"]
     },
     "imagen": "/images/productos/HawasBlack.png",
+    "imagenHover": "/images/productos/Black2dafoto.png",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 10990 },
       { "ml": 100, "tipo": "frasco completo", "precio": 95000 }
@@ -188,6 +197,7 @@
       "fondo": ["Pachulí", "Ámbar"]
     },
     "imagen": "/images/productos/HawasVerde.png",
+    "imagenHover": "/images/productos/Verde2dafoto.png",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 10990 }
     ],
@@ -207,6 +217,7 @@
       "fondo": ["Ron blanco", "Caña de azúcar", "Almizcle"]
     },
     "imagen": "/images/productos/RayhaanAcuatica.png",
+    "imagenHover": "/images/productos/Aquatica2foto.png",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 10490 },
       { "ml": 100, "tipo": "frasco completo", "precio": 85000 }
@@ -227,6 +238,7 @@
       "fondo": ["Vainilla", "Oud", "Madera de guayaco", "Cuero"]
     },
     "imagen": "/images/productos/RayhaanCorium.png",
+    "imagenHover": "/images/productos/Corium2dafoto.png",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 11990 }
     ],
@@ -246,6 +258,7 @@
       "fondo": ["Tabaco", "Vainilla", "Haba tonka"]
     },
     "imagen": "/images/productos/RayhaanItalia.png",
+    "imagenHover": "/images/productos/Italia2dafoto.png",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 11490 }
     ],
@@ -265,6 +278,7 @@
       "fondo": ["Amberwood"]
     },
     "imagen": "/images/productos/RayhaanWolf.png",
+    "imagenHover": "/images/productos/Wolf2dafoto.png",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 12490 }
     ],
@@ -284,6 +298,7 @@
       "fondo": ["Sándalo", "Haba tonka", "Almizcle"]
     },
     "imagen": "/images/productos/Hawastropical1.png",
+    "imagenHover": "/images/productos/Tropical2dafoto.png",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 9990 },
       { "ml": 100, "tipo": "frasco completo", "precio": 85000 }

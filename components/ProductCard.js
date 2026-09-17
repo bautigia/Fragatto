@@ -58,14 +58,29 @@ export default function ProductCard({ producto, mostrarPrecioFrasco = false }) {
           style={{ transform: "perspective(900px) rotateX(0deg) rotateY(0deg) scale(1) translateY(0px)" }}
         >
           {producto.imagen ? (
-            <Image
-              src={producto.imagen}
-              alt={`${producto.nombre} de ${producto.marca}`}
-              width={520}
-              height={520}
-              sizes="(min-width: 1024px) 33vw, 50vw"
-              className="h-full w-auto rounded-xl object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.6)]"
-            />
+            <>
+              <Image
+                src={producto.imagen}
+                alt={`${producto.nombre} de ${producto.marca}`}
+                width={520}
+                height={520}
+                sizes="(min-width: 1024px) 33vw, 50vw"
+                className={`h-full w-auto rounded-xl object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.6)] transition-opacity duration-500 ease-out ${
+                  producto.imagenHover ? "group-hover:opacity-0" : ""
+                }`}
+              />
+              {producto.imagenHover && (
+                <Image
+                  src={producto.imagenHover}
+                  alt={`${producto.nombre} de ${producto.marca}, otro ángulo`}
+                  width={520}
+                  height={520}
+                  sizes="(min-width: 1024px) 33vw, 50vw"
+                  aria-hidden="true"
+                  className="absolute inset-0 h-full w-full rounded-xl object-contain opacity-0 drop-shadow-[0_25px_35px_rgba(0,0,0,0.6)] transition-opacity duration-500 ease-out group-hover:opacity-100"
+                />
+              )}
+            </>
           ) : (
             <BottleIllustration color={colorDeFamilia(producto.familia)} className="h-full w-auto" />
           )}

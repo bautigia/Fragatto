@@ -14,9 +14,15 @@ export default function ComboCarousel({ combos }) {
   const [autoplayPaused, setAutoplayPaused] = useState(false);
 
   function scrollToIndex(i) {
+    const track = trackRef.current;
     const card = cardRefs.current[i];
-    if (!card) return;
-    card.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+    if (!track || !card) return;
+    // scrollIntoView también puede arrastrar el scroll vertical de la página
+    // si la tarjeta no está en viewport (pasa con el autoplay corriendo en
+    // segundo plano); movemos el scrollLeft del track directamente para que
+    // el autoplay nunca toque el scroll de la ventana.
+    const delta = card.getBoundingClientRect().left - track.getBoundingClientRect().left;
+    track.scrollTo({ left: track.scrollLeft + delta, behavior: "smooth" });
   }
 
   function pauseAutoplay() {
