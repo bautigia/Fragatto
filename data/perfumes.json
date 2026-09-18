@@ -12,8 +12,8 @@
       "corazon": ["Jengibre", "Jazmín"],
       "fondo": ["Sándalo", "Ámbar", "Incienso", "Pachulí"]
     },
-    "imagen": "/images/productos/ClubDeNuitIconic1.png",
-    "imagenHover": "/images/productos/Clubdenuit2dafoto.png",
+    "imagen": "/images/productos/ClubDeNuitIconic1.jpg",
+    "imagenHover": "/images/productos/Clubdenuit2dafoto.jpg",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 10490 }
     ],
@@ -32,8 +32,8 @@
       "corazon": ["Cardamomo", "Toffee", "Ante"],
       "fondo": ["Haba tonka", "Pachulí", "Akigalawood"]
     },
-    "imagen": "/images/productos/9PM1.png",
-    "imagenHover": "/images/productos/9PM2daimagen.png",
+    "imagen": "/images/productos/9PM1.jpg",
+    "imagenHover": "/images/productos/9PM2daimagen.jpg",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 10990 },
       { "ml": 100, "tipo": "frasco completo", "precio": 115000 }
@@ -53,8 +53,8 @@
       "corazon": ["Lirio", "Ámbar", "Lavanda"],
       "fondo": ["Haba tonka", "Almizcle", "Pachulí"]
     },
-    "imagen": "/images/productos/Hawasmalibu1.png",
-    "imagenHover": "/images/productos/Hawas2dafoto.png",
+    "imagen": "/images/productos/Hawasmalibu1.jpg",
+    "imagenHover": "/images/productos/Hawas2dafoto.jpg",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 9990 }
     ],
@@ -73,8 +73,8 @@
       "corazon": ["Vainilla", "Tabaco", "Flor de azahar"],
       "fondo": ["Haba tonka", "Benjuí", "Ládano"]
     },
-    "imagen": "/images/productos/TheKingdom1.png",
-    "imagenHover": "/images/productos/Thekindom2dafoto.png",
+    "imagen": "/images/productos/TheKingdom1.jpg",
+    "imagenHover": "/images/productos/Thekindom2dafoto.jpg",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 9990 }
     ],
@@ -93,8 +93,8 @@
       "corazon": ["Jazmín", "Pimienta rosa", "Praliné"],
       "fondo": ["Haba tonka", "Ámbar gris", "Cedro"]
     },
-    "imagen": "/images/productos/Vulcan1.png",
-    "imagenHover": "/images/productos/Vulcan2dafoto.png",
+    "imagen": "/images/productos/Vulcan1.jpg",
+    "imagenHover": "/images/productos/Vulcan2dafoto.jpg",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 10990 },
       { "ml": 100, "tipo": "frasco completo", "precio": 95000 }
@@ -114,8 +114,8 @@
       "corazon": ["Lavanda", "Notas marinas", "Palisandro"],
       "fondo": ["Amberwood", "Ámbar gris", "Vetiver"]
     },
-    "imagen": "/images/productos/UOMO1.png",
-    "imagenHover": "/images/productos/Uomo2dafoto.png",
+    "imagen": "/images/productos/UOMO1.jpg",
+    "imagenHover": "/images/productos/Uomo2dafoto.jpg",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 9490 }
     ],
@@ -134,8 +134,8 @@
       "corazon": ["Lirio"],
       "fondo": ["Praliné", "Ambroxán", "Sándalo"]
     },
-    "imagen": "/images/productos/ClubdenuitMaleka.png",
-    "imagenHover": "/images/productos/Maleka2dafoto.png",
+    "imagen": "/images/productos/ClubdenuitMaleka.jpg",
+    "imagenHover": "/images/productos/Maleka2dafoto.jpg",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 11490 }
     ],
@@ -154,8 +154,8 @@
       "corazon": ["Ámbar gris", "Madera de ámbar"],
       "fondo": ["Resina de abeto", "Cedro"]
     },
-    "imagen": "/images/productos/ClubdenuitUntold.png",
-    "imagenHover": "/images/productos/Untold2dafoto.png",
+    "imagen": "/images/productos/ClubdenuitUntold.jpg",
+    "imagenHover": "/images/productos/Untold2dafoto.jpg",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 10990 },
       { "ml": 105, "tipo": "frasco completo", "precio": 90000 }
@@ -175,8 +175,8 @@
       "corazon": ["Cedro", "Pachulí", "Jazmín"],
       "fondo": ["Musgo de roble", "Maderas", "Ámbar"]
     },
-    "imagen": "/images/productos/HawasBlack.png",
-    "imagenHover": "/images/productos/Black2dafoto.png",
+    "imagen": "/images/productos/HawasBlack.jpg",
+    "imagenHover": "/images/productos/Black2dafoto.jpg",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 10990 },
       { "ml": 100, "tipo": "frasco completo", "precio": 95000 }
@@ -196,8 +196,8 @@
       "corazon": ["Manzana verde"],
       "fondo": ["Pachulí", "Ámbar"]
     },
-    "imagen": "/images/productos/HawasVerde.png",
-    "imagenHover": "/images/productos/Verde2dafoto.png",
+    "imagen": "/images/productos/HawasVerde.jpg",
+    "imagenHover": "/images/productos/Verde2dafoto.jpg",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 10990 }
     ],
@@ -216,8 +216,8 @@
       "corazon": ["Jengibre", "Ylang-ylang", "Jazmín", "Hibisco"],
       "fondo": ["Ron blanco", "Caña de azúcar", "Almizcle"]
     },
-    "imagen": "/images/productos/RayhaanAcuatica.png",
-    "imagenHover": "/images/productos/Aquatica2foto.png",
+    "imagen": "/images/productos/RayhaanAcuatica.jpg",
+    "imagenHover": "/images/productos/Aquatica2foto.jpg",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 10490 },
       { "ml": 100, "tipo": "frasco completo", "precio": 85000 }
@@ -237,8 +237,8 @@
       "corazon": ["Salvia", "Lavanda"],
       "fondo": ["Vainilla", "Oud", "Madera de guayaco", "Cuero"]
     },
-    "imagen": "/images/productos/RayhaanCorium.png",
-    "imagenHover": "/images/productos/Corium2dafoto.png",
+    "imagen": "/images/productos/RayhaanCorium.jpg",
+    "imagenHover": "/images/productos/Corium2dafoto.jpg",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 11990 }
     ],
@@ -257,8 +257,8 @@
       "corazon": ["Miel", "Canela", "Cashmerán", "Jazmín sambac"],
       "fondo": ["Tabaco", "Vainilla", "Haba tonka"]
     },
-    "imagen": "/images/productos/RayhaanItalia.png",
-    "imagenHover": "/images/productos/Italia2dafoto.png",
+    "imagen": "/images/productos/RayhaanItalia.jpg",
+    "imagenHover": "/images/productos/Italia2dafoto.jpg",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 11490 }
     ],
@@ -277,8 +277,8 @@
       "corazon": ["Toffee"],
       "fondo": ["Amberwood"]
     },
-    "imagen": "/images/productos/RayhaanWolf.png",
-    "imagenHover": "/images/productos/Wolf2dafoto.png",
+    "imagen": "/images/productos/RayhaanWolf.jpg",
+    "imagenHover": "/images/productos/Wolf2dafoto.jpg",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 12490 }
     ],
@@ -297,8 +297,8 @@
       "corazon": ["Coco", "Higo", "Menta"],
       "fondo": ["Sándalo", "Haba tonka", "Almizcle"]
     },
-    "imagen": "/images/productos/Hawastropical1.png",
-    "imagenHover": "/images/productos/Tropical2dafoto.png",
+    "imagen": "/images/productos/Hawastropical1.jpg",
+    "imagenHover": "/images/productos/Tropical2dafoto.jpg",
     "formatos": [
       { "ml": 5, "tipo": "decant", "precio": 9990 },
       { "ml": 100, "tipo": "frasco completo", "precio": 85000 }
