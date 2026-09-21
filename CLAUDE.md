@@ -133,6 +133,12 @@ public/images/           ← fotos reales de producto (atomizadores-parados.png,
 - **Combos** → `data/combos.json` (nombre, cantidad de decants, descripción, precio).
 - **WhatsApp y textos generales** → `lib/config.js` (`whatsappNumber` hoy es un
   placeholder, reemplazar por el número real sin espacios ni signos).
+- **Meta Pixel** → el ID está en `lib/config.js` (`metaPixelId`, dato público,
+  commiteado a propósito: una variable de entorno se perdió en un deploy hecho
+  desde otro lugar sin `.env.local`). Solo carga en producción. Eventos en
+  `components/MetaPixel.js` (PageView, y `Contact` en cualquier link a `wa.me`) y
+  `lib/pixel.js` (`track()`), más ViewContent / AddToCart / InitiateCheckout en
+  `ProductoDetalle.js`, `CartContext.js` y `CartDrawer.js`.
 - **Colores y tipografías** → `app/globals.css` (`:root` + `@theme inline`).
   Headline/UI en mayúsculas: Jost (`font-display`, clase utilitaria `tracked-caps`
   para el tracking). Body: Outfit (`font-sans`).
