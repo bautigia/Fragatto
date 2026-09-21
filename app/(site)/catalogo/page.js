@@ -1,6 +1,7 @@
 import Image from "next/image";
 import CatalogoClient from "@/components/CatalogoClient";
 import ComboCarousel from "@/components/ComboCarousel";
+import PromoMarquee from "@/components/PromoMarquee";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { getAllProducts } from "@/lib/catalog";
 import { getAllCombos } from "@/lib/combos";
@@ -24,6 +25,10 @@ export default async function CatalogoPage() {
       <div className="fixed inset-0 -z-10" aria-hidden="true">
         <Image src="/images/fondo-catalogo.png" alt="" fill priority className="object-cover" />
         <div className="absolute inset-0 bg-paper/35" />
+      </div>
+
+      <div className="mt-6">
+        <PromoMarquee />
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 py-14 lg:px-10 lg:py-20">

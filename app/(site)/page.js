@@ -50,7 +50,10 @@ export default async function Home() {
 
   return (
     <div className="flex flex-col gap-8 pb-16 lg:gap-12 lg:pb-28">
-      <ScrubHero />
+      <div>
+        <ScrubHero />
+        <PromoMarquee />
+      </div>
 
       <RevealOnScroll direction="left">
         <section className={`mx-auto max-w-6xl px-6 py-12 lg:px-14 ${PANEL}`}>
@@ -104,10 +107,6 @@ export default async function Home() {
             </div>
           </div>
         </section>
-      </RevealOnScroll>
-
-      <RevealOnScroll direction="up">
-        <PromoMarquee />
       </RevealOnScroll>
 
       <RevealOnScroll direction="left">
