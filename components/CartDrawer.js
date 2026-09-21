@@ -3,9 +3,10 @@
 import Image from "next/image";
 import { useCart } from "@/context/CartContext";
 import { formatPrecio } from "@/lib/products";
+import { track } from "@/lib/pixel";
 
 export default function CartDrawer() {
-  const { items, isOpen, setIsOpen, removeItem, updateCantidad, clear, totalPrecio, whatsappUrlCarrito } =
+  const { items, isOpen, setIsOpen, removeItem, updateCantidad, clear, totalPrecio, totalItems, whatsappUrlCarrito } =
     useCart();
 
   return (
@@ -114,6 +115,15 @@ export default function CartDrawer() {
               href={whatsappUrlCarrito}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() =>
+                track("InitiateCheckout", {
+                  content_ids: items.map((i) => i.productId),
+                  content_type: "product",
+                  num_items: totalItems,
+                  value: totalPrecio,
+                  currency: "ARS",
+                })
+              }
               className="btn-glass flex w-full items-center justify-center px-5 py-3 text-sm font-medium text-ink transition-transform duration-200 active:scale-[0.98]"
             >
               Consultar por WhatsApp

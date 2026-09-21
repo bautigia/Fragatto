@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import BottleIllustration from "./BottleIllustration";
 import { colorDeFamilia } from "@/lib/familias";
@@ -9,6 +9,7 @@ import { iconoDeNota } from "@/lib/notas";
 import { IconDecant } from "./icons";
 import { useCart } from "@/context/CartContext";
 import { CONFIG } from "@/lib/config";
+import { track } from "@/lib/pixel";
 
 function GrupoNotas({ titulo, notas }) {
   return (
@@ -34,6 +35,15 @@ export default function ProductoDetalle({ producto }) {
   const [formatoIndex, setFormatoIndex] = useState(Math.max(0, primerDisponible));
   const [cantidad, setCantidad] = useState(1);
   const { addItem } = useCart();
+
+  useEffect(() => {
+    track("ViewContent", {
+      content_ids: [producto.id],
+      content_name: producto.nombre,
+      content_type: "product",
+      currency: "ARS",
+    });
+  }, [producto.id, producto.nombre]);
 
   const formato = producto.formatos[formatoIndex];
   const proximamente = formato.precio == null;

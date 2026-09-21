@@ -9,6 +9,7 @@ import {
   useState,
 } from "react";
 import { CONFIG } from "@/lib/config";
+import { track } from "@/lib/pixel";
 
 const CartContext = createContext(null);
 const STORAGE_KEY = "fragatto-seleccion";
@@ -42,6 +43,13 @@ export function CartProvider({ children }) {
   }, [items, hydrated]);
 
   const addItem = useCallback((entry) => {
+    track("AddToCart", {
+      content_ids: [entry.productId],
+      content_name: entry.nombre,
+      content_type: "product",
+      value: entry.precio * entry.cantidad,
+      currency: "ARS",
+    });
     setItems((prev) => {
       const existing = prev.find((i) => sameEntry(i, entry));
       if (existing) {

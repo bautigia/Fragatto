@@ -7,10 +7,12 @@ import CartDrawer from "@/components/CartDrawer";
 import QuickViewModal from "@/components/QuickViewModal";
 import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 import AmbientGlow from "@/components/AmbientGlow";
+import MetaPixel from "@/components/MetaPixel";
 
 export default function SiteLayout({ children }) {
   return (
     <>
+      <MetaPixel />
       <a
         href="#main"
         className="btn-glass fixed left-4 top-4 z-50 -translate-y-20 px-5 py-2.5 text-sm font-medium text-ink transition-transform focus-visible:translate-y-0"
