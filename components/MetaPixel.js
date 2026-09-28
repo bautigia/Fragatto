@@ -23,7 +23,7 @@ export default function MetaPixel() {
   }, [pathname]);
 
   // Un solo listener para todos los links a WhatsApp del sitio (botón
-  // flotante, footer, contacto, catálogo, combos, ficha y carrito), en vez de
+  // flotante, footer, contacto, catálogo, ficha y carrito), en vez de
   // convertir cada Server Component en client solo para medir el click.
   useEffect(() => {
     if (!META_PIXEL_ID) return;

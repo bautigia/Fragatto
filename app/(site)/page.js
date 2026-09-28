@@ -1,11 +1,8 @@
-import Link from "next/link";
 import ScrubHero from "@/components/ScrubHero";
 import Decant3D from "@/components/Decant3D";
-import ComboCarousel from "@/components/ComboCarousel";
 import PromoMarquee from "@/components/PromoMarquee";
 import RevealOnScroll from "@/components/RevealOnScroll";
-import { IconPerfume, IconDecant, IconCombo, IconEnvio, IconShieldCheck, IconSearch, IconBriefcase, IconDollar } from "@/components/icons";
-import { getAllCombos } from "@/lib/combos";
+import { IconPerfume, IconDecant, IconEnvio, IconShieldCheck, IconSearch, IconBriefcase, IconDollar } from "@/components/icons";
 import { registrarVisita } from "@/lib/analytics";
 
 export const revalidate = 0;
@@ -15,7 +12,6 @@ const PANEL = "panel-glass";
 const PILARES = [
   { icon: IconPerfume, titulo: "Perfumes", texto: "100% originales" },
   { icon: IconDecant, titulo: "Decants 5ml", texto: "Probá antes de elegir" },
-  { icon: IconCombo, titulo: "Combos", texto: "Armados pensados para vos" },
   { icon: IconEnvio, titulo: "Envíos", texto: "A todo el país" },
 ];
 
@@ -30,7 +26,7 @@ const PASOS = [
   {
     numero: "01",
     titulo: "Elegí tu fragancia",
-    texto: "Recorré el catálogo y encontrá el perfume que querés probar o el combo que más te cierra.",
+    texto: "Recorré el catálogo y encontrá el perfume que querés probar.",
   },
   {
     numero: "02",
@@ -46,7 +42,6 @@ const PASOS = [
 
 export default async function Home() {
   registrarVisita("home");
-  const combos = await getAllCombos();
 
   return (
     <div className="flex flex-col gap-8 pb-16 lg:gap-12 lg:pb-28">
@@ -123,21 +118,6 @@ export default async function Home() {
               </div>
             ))}
           </div>
-        </section>
-      </RevealOnScroll>
-
-      <RevealOnScroll direction="right">
-        <section className={`mx-auto max-w-6xl px-6 py-14 lg:px-14 lg:py-20 ${PANEL}`}>
-          <div className="mb-10 flex items-end justify-between gap-4">
-            <div className="flex flex-col gap-2">
-              <span className="text-xs tracked-caps text-accent">Combos</span>
-              <h2 className="font-display text-3xl leading-tight tracked-caps text-ink">Armados pensados para vos</h2>
-            </div>
-            <Link href="/catalogo" className="text-sm text-ink-soft transition-colors hover:text-accent">
-              Ver catálogo completo →
-            </Link>
-          </div>
-          <ComboCarousel combos={combos} />
         </section>
       </RevealOnScroll>
     </div>

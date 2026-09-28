@@ -72,31 +72,3 @@ export async function updateFormato(formData) {
   revalidatePath("/producto/[slug]", "page");
   revalidatePath("/");
 }
-
-export async function updateCombo(formData) {
-  const supabase = await createClient();
-  await requireUser(supabase);
-
-  const comboId = formData.get("comboId");
-  const precio = Number(formData.get("precio"));
-  const disponible = formData.get("disponible") === "on";
-
-  if (!comboId || !Number.isFinite(precio) || precio < 0) {
-    throw new Error("Datos inválidos.");
-  }
-
-  const { error } = await supabase.from("combo_precio_stock").upsert(
-    {
-      combo_id: comboId,
-      precio,
-      disponible,
-      updated_at: new Date().toISOString(),
-    },
-    { onConflict: "combo_id" }
-  );
-  if (error) throw new Error(error.message);
-
-  revalidatePath("/admin");
-  revalidatePath("/catalogo");
-  revalidatePath("/");
-}

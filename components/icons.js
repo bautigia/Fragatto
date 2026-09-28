@@ -23,17 +23,6 @@ export function IconDecant(props) {
   );
 }
 
-export function IconCombo(props) {
-  return (
-    <svg {...base(props)}>
-      <rect x="3.5" y="9" width="17" height="11" rx="1.4" />
-      <path d="M3.5 13h17" />
-      <path d="M12 9v11" />
-      <path d="M12 9c-1.4 0-2.6-1-2.6-2.3S9.9 4 11.4 4c1.3 0 2 1 2.6 2.2C14.6 5 15.3 4 16.6 4c1.5 0 2.6 1.2 2.6 2.7S18 9 16.6 9Z" />
-    </svg>
-  );
-}
-
 export function IconEnvio(props) {
   return (
     <svg {...base(props)}>

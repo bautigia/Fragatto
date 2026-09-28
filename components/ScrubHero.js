@@ -4,11 +4,27 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLogoIntroRefs } from "@/context/LogoIntroContext";
+import HeroPromoCarousel from "@/components/HeroPromoCarousel";
 
 const smoothstep = (p, e0, e1) => {
   const t = Math.min(1, Math.max(0, (p - e0) / (e1 - e0)));
   return t * t * (3 - 2 * t);
 };
+
+const HERO_PROMOS = [
+  {
+    src: "/images/promo/fragatto-3-decants-30000-1080x1350.jpg",
+    alt: "Promo 3 decants a elección por $30.000",
+  },
+  {
+    src: "/images/promo/fragatto-6-decants-55000-1080x1350.jpg",
+    alt: "Promo 6 decants a elección por $55.000",
+  },
+  {
+    src: "/images/promo/fragatto-vulcan-feu-decant-regalo-discreto-1080x1350.jpg",
+    alt: "Comprá un frasco y llevate un decant de regalo a elección",
+  },
+];
 
 // Tramo del scroll del hero (en fracción de k, 0 a 1) donde el logo grande
 // se achica y viaja hasta el logo chico de la navbar.
@@ -25,6 +41,7 @@ export default function ScrubHero() {
   const headlineRef = useRef(null);
   const paragraphRef = useRef(null);
   const ctaRef = useRef(null);
+  const promoRef = useRef(null);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -38,6 +55,7 @@ export default function ScrubHero() {
       { ref: kickerRef, from: LOGO_TO, to: LOGO_TO + 0.12 },
       { ref: headlineRef, from: LOGO_TO + 0.03, to: LOGO_TO + 0.28 },
       { ref: paragraphRef, from: 0.42, to: 0.62 },
+      { ref: promoRef, from: 0.42, to: 0.62 },
       { ref: ctaRef, from: 0.7, to: 0.88 },
     ];
 
@@ -181,35 +199,44 @@ export default function ScrubHero() {
         </div>
 
         <div className="relative z-10 mx-auto w-full max-w-6xl px-6 lg:px-10">
-          <div className="flex max-w-2xl flex-col gap-6">
-            <span ref={kickerRef} className="text-xs tracked-caps text-accent" style={{ opacity: 0 }}>
-              Probá. Descubrí. Elegí.
-            </span>
-            <h1
-              ref={headlineRef}
-              className="font-display text-4xl leading-[1.05] tracked-caps text-ink sm:text-5xl lg:text-[3.4rem]"
-              style={{ opacity: 0 }}
-            >
-              Un espacio para descubrir tu próxima fragancia.
-            </h1>
-            <p ref={paragraphRef} className="max-w-[52ch] text-ink-soft" style={{ opacity: 0 }}>
-              Fragatto decanta perfumes 100% originales en atomizadores de 5ml para que puedas
-              probarlos de verdad antes de invertir en el frasco completo. Mismo perfume, mismo
-              frasco de origen, en la medida justa.
-            </p>
-            <div ref={ctaRef} className="flex flex-wrap gap-4" style={{ opacity: 0 }}>
-              <Link
-                href="/catalogo"
-                className="btn-glass px-6 py-3 text-sm font-medium text-ink transition-transform duration-200 hover:-translate-y-0.5 active:scale-[0.98]"
+          <div className="flex flex-col gap-10 xl:flex-row xl:justify-between">
+            <div className="flex max-w-2xl flex-col gap-6">
+              <span ref={kickerRef} className="text-xs tracked-caps text-accent" style={{ opacity: 0 }}>
+                Probá. Descubrí. Elegí.
+              </span>
+              <h1
+                ref={headlineRef}
+                className="font-display text-4xl leading-[1.05] tracked-caps text-ink sm:text-5xl lg:text-[3.4rem]"
+                style={{ opacity: 0 }}
               >
-                Ver catálogo
-              </Link>
-              <Link
-                href="/nosotros"
-                className="btn-glass-ghost px-6 py-3 text-sm font-medium text-ink transition-colors hover:text-accent"
-              >
-                Qué es un decant
-              </Link>
+                Un espacio para descubrir tu próxima fragancia.
+              </h1>
+              <p ref={paragraphRef} className="max-w-[52ch] text-ink-soft" style={{ opacity: 0 }}>
+                Fragatto decanta perfumes 100% originales en atomizadores de 5ml para que puedas
+                probarlos de verdad antes de invertir en el frasco completo. Mismo perfume, mismo
+                frasco de origen, en la medida justa.
+              </p>
+              <div ref={ctaRef} className="flex flex-wrap gap-4" style={{ opacity: 0 }}>
+                <Link
+                  href="/catalogo"
+                  className="btn-glass px-6 py-3 text-sm font-medium text-ink transition-transform duration-200 hover:-translate-y-0.5 active:scale-[0.98]"
+                >
+                  Ver catálogo
+                </Link>
+                <Link
+                  href="/nosotros"
+                  className="btn-glass-ghost px-6 py-3 text-sm font-medium text-ink transition-colors hover:text-accent"
+                >
+                  Qué es un decant
+                </Link>
+              </div>
+            </div>
+
+            <div ref={promoRef} className="hidden xl:flex xl:flex-1 xl:flex-col xl:gap-4" style={{ opacity: 0 }}>
+              <span className="text-center text-xs tracked-caps text-accent">Nuestras promos</span>
+              <div className="min-h-0 flex-1">
+                <HeroPromoCarousel items={HERO_PROMOS} />
+              </div>
             </div>
           </div>
         </div>

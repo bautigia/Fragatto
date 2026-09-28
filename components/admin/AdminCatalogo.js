@@ -1,7 +1,7 @@
 "use client";
 
 import { useFormStatus } from "react-dom";
-import { updateFormato, updateCombo } from "@/app/admin/actions";
+import { updateFormato } from "@/app/admin/actions";
 
 function BotonGuardar() {
   const { pending } = useFormStatus();
@@ -64,43 +64,7 @@ function FilaFormato({ producto, formato }) {
   );
 }
 
-function FilaCombo({ combo }) {
-  return (
-    <form
-      action={updateCombo}
-      className="flex flex-wrap items-center gap-3 border-b border-black/5 py-3 last:border-0"
-    >
-      <input type="hidden" name="comboId" value={combo.id} />
-
-      <div className="min-w-[220px] flex-1">
-        <p className="text-sm font-medium">{combo.nombre}</p>
-        <p className="text-xs text-black/50">{combo.cantidadDecants} decants</p>
-      </div>
-
-      <label className="flex items-center gap-2 text-xs text-black/60">
-        Precio
-        <input
-          type="number"
-          name="precio"
-          defaultValue={combo.precio}
-          min="0"
-          step="1"
-          required
-          className="w-28 rounded-lg border border-black/15 px-2 py-1.5 text-sm outline-none focus:border-[#476498]"
-        />
-      </label>
-
-      <label className="flex items-center gap-2 text-xs text-black/60">
-        <input type="checkbox" name="disponible" defaultChecked={combo.disponible !== false} />
-        Disponible
-      </label>
-
-      <BotonGuardar />
-    </form>
-  );
-}
-
-export default function AdminCatalogo({ productos, combos }) {
+export default function AdminCatalogo({ productos }) {
   return (
     <div className="flex flex-col gap-10">
       <section>
@@ -111,15 +75,6 @@ export default function AdminCatalogo({ productos, combos }) {
               <FilaFormato key={`${producto.id}-${formato.ml}-${formato.tipo}`} producto={producto} formato={formato} />
             ))
           )}
-        </div>
-      </section>
-
-      <section>
-        <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-black/60">Combos</h2>
-        <div className="rounded-2xl border border-black/10 bg-white px-4">
-          {combos.map((combo) => (
-            <FilaCombo key={combo.id} combo={combo} />
-          ))}
         </div>
       </section>
     </div>

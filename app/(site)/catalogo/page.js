@@ -1,10 +1,8 @@
 import Image from "next/image";
 import CatalogoClient from "@/components/CatalogoClient";
-import ComboCarousel from "@/components/ComboCarousel";
 import PromoMarquee from "@/components/PromoMarquee";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { getAllProducts } from "@/lib/catalog";
-import { getAllCombos } from "@/lib/combos";
 import { registrarVisita } from "@/lib/analytics";
 import { CONFIG } from "@/lib/config";
 
@@ -17,7 +15,7 @@ export const revalidate = 0;
 
 export default async function CatalogoPage() {
   registrarVisita("catalogo");
-  const [productos, combos] = await Promise.all([getAllProducts(), getAllCombos()]);
+  const productos = await getAllProducts();
   const whatsappEncargoHref = CONFIG.urlWhatsapp(CONFIG.mensajeWhatsappEncargo());
 
   return (
@@ -39,18 +37,6 @@ export default async function CatalogoPage() {
         </div>
 
         <CatalogoClient productos={productos} />
-
-        <RevealOnScroll>
-          <section className="mt-16">
-            <div className="mb-6 flex flex-col gap-2">
-              <span className="text-xs tracked-caps text-accent">Combos</span>
-              <h2 className="font-display text-2xl leading-tight tracked-caps text-ink">
-                Armados pensados para vos
-              </h2>
-            </div>
-            <ComboCarousel combos={combos} />
-          </section>
-        </RevealOnScroll>
 
         <RevealOnScroll>
           <section
