@@ -94,10 +94,13 @@ components/
   ScrubHero.js                              ← hero de la home con scroll-scrubbing sobre las dos fotos
                                                reales (crossfade + zoom + texto en bandas), ver sección
                                                de la skill 10k-websites más abajo
-  HeroPromoCarousel.js                      ← panel de vidrio a la derecha del texto del hero, mismo
-                                               alto que el bloque de texto (arriba y abajo calzan);
-                                               rota sola las gráficas de `HERO_PROMOS` (constante en
-                                               ScrubHero.js) cada 4s, solo visible en `xl:` en adelante
+  HeroPromoCarousel.js                      ← carrusel que rota solo las gráficas de `HERO_PROMOS`
+                                               (constante en ScrubHero.js) cada 4s; en `xl:` en adelante
+                                               se usa dentro del hero como panel de vidrio a la derecha
+                                               del texto (mismo alto, arriba y abajo calzan); por debajo
+                                               de `xl:` se reusa en una sección propia debajo del hero
+                                               (home, `xl:hidden`) porque el hero mobile es `sticky`/
+                                               100dvh sin lugar para sumarlo
   ScrollParallax.js                         ← capa de parallax genérica (modos "inview" y "scroll")
   AmbientGlow.js                            ← manchas de luz azul difuminadas, animadas en CSS y con
                                                parallax de scroll (reemplaza el humo de las redes sin
@@ -136,11 +139,15 @@ public/images/           ← fotos reales de producto (atomizadores-parados.png,
 - **Agregar/editar perfumes** → `data/perfumes.json`. Cada producto tiene
   `formatos` (array de `{ ml, tipo: "decant" | "frasco completo", precio }`;
   el decant siempre es `ml: 5`). `destacado: true` lo muestra en Destacados.
-- **Promociones del hero** → constante `HERO_PROMOS` en `components/ScrubHero.js`
-  (array de `{ src, alt }`, o `{ titulo }` para el placeholder de vidrio
-  actual). Las renderiza `components/HeroPromoCarousel.js`: rotan solas cada
-  4s al lado del texto del hero, solo en pantallas `xl:` en adelante. No son
-  productos ni tienen precio — reemplazaron a los combos, que se discontinuaron.
+- **Promociones del hero** → constante `HERO_PROMOS` (exportada) en
+  `components/ScrubHero.js` (array de `{ src, alt }`, o `{ titulo }` para el
+  placeholder de vidrio actual). Las renderiza `components/HeroPromoCarousel.js`:
+  rotan solas cada 4s. En `xl:` en adelante viven dentro del hero, al lado del
+  texto (`ScrubHero.js`); por debajo de `xl:` no entran en el hero (que es
+  `sticky`/100dvh con scroll-scrubbing y espacio vertical fijo), así que se
+  repiten en una sección propia justo debajo (`app/(site)/page.js`, oculta con
+  `xl:hidden` para no duplicar la de escritorio). No son productos ni tienen
+  precio — reemplazaron a los combos, que se discontinuaron.
 - **WhatsApp y textos generales** → `lib/config.js` (`whatsappNumber` hoy es un
   placeholder, reemplazar por el número real sin espacios ni signos).
 - **Meta Pixel** → el ID está en `lib/config.js` (`metaPixelId`, dato público,

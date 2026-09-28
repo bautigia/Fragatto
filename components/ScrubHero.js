@@ -11,7 +11,7 @@ const smoothstep = (p, e0, e1) => {
   return t * t * (3 - 2 * t);
 };
 
-const HERO_PROMOS = [
+export const HERO_PROMOS = [
   {
     src: "/images/promo/fragatto-3-decants-30000-1080x1350.jpg",
     alt: "Promo 3 decants a elección por $30.000",

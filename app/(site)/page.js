@@ -1,4 +1,5 @@
-import ScrubHero from "@/components/ScrubHero";
+import ScrubHero, { HERO_PROMOS } from "@/components/ScrubHero";
+import HeroPromoCarousel from "@/components/HeroPromoCarousel";
 import Decant3D from "@/components/Decant3D";
 import PromoMarquee from "@/components/PromoMarquee";
 import RevealOnScroll from "@/components/RevealOnScroll";
@@ -49,6 +50,15 @@ export default async function Home() {
         <ScrubHero />
         <PromoMarquee />
       </div>
+
+      <RevealOnScroll className="xl:hidden">
+        <section className={`mx-auto max-w-sm px-6 py-10 ${PANEL}`}>
+          <span className="block text-center text-xs tracked-caps text-accent">Nuestras promos</span>
+          <div className="mt-4 aspect-[4/5] w-full">
+            <HeroPromoCarousel items={HERO_PROMOS} />
+          </div>
+        </section>
+      </RevealOnScroll>
 
       <RevealOnScroll direction="left">
         <section className={`mx-auto max-w-6xl px-6 py-12 lg:px-14 ${PANEL}`}>
