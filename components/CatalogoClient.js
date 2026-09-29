@@ -6,11 +6,8 @@ import RevealOnScroll from "./RevealOnScroll";
 
 function coincideFiltro(producto, filtro) {
   const tipos = new Set(producto.formatos.map((f) => f.tipo));
-  const tieneDecant = tipos.has("decant");
-  const tieneFrasco = tipos.has("frasco completo");
-  if (filtro === "decant") return tieneDecant && !tieneFrasco;
-  if (filtro === "ambos") return tieneDecant && tieneFrasco;
-  if (filtro === "frasco") return tieneFrasco;
+  if (filtro === "decant") return tipos.has("decant");
+  if (filtro === "frasco") return tipos.has("frasco completo");
   return true;
 }
 
@@ -32,7 +29,6 @@ export default function CatalogoClient({ productos }) {
 
   const filtros = [
     { id: "decant", label: "Decant" },
-    { id: "ambos", label: `Decant y frasco${sufijoFrasco}` },
     { id: "frasco", label: `Frasco completo${sufijoFrasco}` },
   ];
 
@@ -65,7 +61,7 @@ export default function CatalogoClient({ productos }) {
         <div className="grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
           {productosFiltrados.map((producto, i) => (
             <RevealOnScroll key={producto.id} delay={(i % 3) * 90}>
-              <ProductCard producto={producto} mostrarPrecioFrasco={filtro === "frasco" || filtro === "ambos"} />
+              <ProductCard producto={producto} mostrarPrecioFrasco={filtro === "frasco"} />
             </RevealOnScroll>
           ))}
         </div>

@@ -304,5 +304,130 @@
       { "ml": 100, "tipo": "frasco completo", "precio": 85000 }
     ],
     "destacado": false
+  },
+  {
+    "id": "hawas-chrome",
+    "marca": "Rasasi",
+    "nombre": "Hawas For Him Chrome",
+    "genero": "masculino",
+    "familia": "afrutado",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura de durazno, naranja dulce y frutas amarillas, corazón jugoso de maracuyá, mango y frutas acuáticas, y un fondo de almizcle, ámbar y vainilla. Muy frutal y dulce, contrasta con su frasco metálico.",
+    "notas": {
+      "salida": ["Durazno", "Naranja dulce", "Frutas amarillas"],
+      "corazon": ["Maracuyá", "Mango", "Frutas acuáticas"],
+      "fondo": ["Almizcle", "Ámbar", "Vainilla"]
+    },
+    "imagen": "/images/productos/HawasChrome1.jpg",
+    "imagenHover": "/images/productos/HawasChrome2dafoto.jpg",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 12490 },
+      { "ml": 100, "tipo": "frasco completo", "precio": 105000 }
+    ],
+    "destacado": false
+  },
+  {
+    "id": "eclaire",
+    "marca": "Lattafa",
+    "nombre": "Eclaire",
+    "genero": "femenino",
+    "familia": "floral",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura de caramelo, leche y azúcar, corazón de miel y flores blancas, y un fondo de vainilla, praliné y almizcle. Gourmand y dulce, como un postre en frasco.",
+    "notas": {
+      "salida": ["Caramelo", "Leche", "Azúcar"],
+      "corazon": ["Miel", "Flores blancas"],
+      "fondo": ["Vainilla", "Praliné", "Almizcle"]
+    },
+    "imagen": "/images/productos/Eclaire1.jpg",
+    "imagenHover": "/images/productos/Eclaire2dafoto.jpg",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 11990 },
+      { "ml": 100, "tipo": "frasco completo", "precio": 95000 }
+    ],
+    "destacado": false
+  },
+  {
+    "id": "angham-second-song",
+    "marca": "Lattafa",
+    "nombre": "Angham Second Song",
+    "genero": "femenino",
+    "familia": "floral",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura de flor de peral y bergamota, corazón floral de peonía, praliné y azahar, y un fondo de vainilla, almizcle, haba tonka y ambroxan. Dulce y luminoso, con un final limpio y moderno.",
+    "notas": {
+      "salida": ["Flor de peral", "Bergamota"],
+      "corazon": ["Peonía", "Praliné", "Azahar"],
+      "fondo": ["Vainilla", "Almizcle", "Haba tonka", "Ambroxan"]
+    },
+    "imagen": "/images/productos/AnghamSecondSong1.jpg",
+    "imagenHover": "/images/productos/AnghamSecondSong2dafoto.jpg",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 9990 },
+      { "ml": 100, "tipo": "frasco completo", "precio": 75000 }
+    ],
+    "destacado": false
+  },
+  {
+    "id": "atlas",
+    "marca": "Lattafa",
+    "nombre": "Atlas",
+    "genero": "unisex",
+    "familia": "fresco",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura marina de sal y limón, corazón de dávana e iris, y un fondo de ámbar gris, musgo de roble y sándalo. Acuático pero con cuerpo, frío y mineral en vez de cítrico liviano.",
+    "notas": {
+      "salida": ["Notas marinas", "Sal", "Limón"],
+      "corazon": ["Dávana", "Iris"],
+      "fondo": ["Ámbar gris", "Musgo de roble", "Sándalo"]
+    },
+    "imagen": "/images/productos/Atlas1.jpg",
+    "imagenHover": "/images/productos/Atlas2dafoto.jpg",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 12990 },
+      { "ml": 100, "tipo": "frasco completo", "precio": 80000 }
+    ],
+    "destacado": false
+  },
+  {
+    "id": "atlantis-extrait",
+    "marca": "French Avenue",
+    "nombre": "Atlantis Extrait",
+    "genero": "femenino",
+    "familia": "afrutado",
+    "concentracion": "Extrait de Parfum",
+    "descripcion": "Apertura cítrica de naranja, limón y mandarina, corazón tropical de sandía y coco, y un fondo de cacao, madera ambarada y ámbar gris. Frutal y goloso, con muchísimo cuerpo por ser extrait.",
+    "notas": {
+      "salida": ["Naranja", "Limón", "Mandarina"],
+      "corazon": ["Sandía", "Coco"],
+      "fondo": ["Cacao", "Madera ambarada", "Ámbar gris"]
+    },
+    "imagen": "/images/productos/AtlantisExtrait1.jpg",
+    "imagenHover": "/images/productos/AtlantisExtrait2dafoto.jpg",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 11990 },
+      { "ml": 100, "tipo": "frasco completo", "precio": 95000 }
+    ],
+    "destacado": false
+  },
+  {
+    "id": "game-of-spades-moon",
+    "marca": "Jo Milano Paris",
+    "nombre": "Game of Spades Moon",
+    "genero": "unisex",
+    "familia": "oriental",
+    "concentracion": "Extrait de Parfum",
+    "descripcion": "Apertura floral de clavel, gardenia y jazmín, corazón de flores blancas, notas marinas, pachulí y sándalo, y un fondo gourmand de café y caramelo. Floral-oriental con un toque dulce y salino poco común.",
+    "notas": {
+      "salida": ["Clavel", "Gardenia", "Jazmín"],
+      "corazon": ["Flores blancas", "Notas marinas", "Pachulí", "Sándalo"],
+      "fondo": ["Café", "Caramelo"]
+    },
+    "imagen": "/images/productos/GameOfSpadesMoon1.jpg",
+    "imagenHover": "/images/productos/GameOfSpadesMoon2dafoto.jpg",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 14490 }
+    ],
+    "destacado": false
   }
 ]
