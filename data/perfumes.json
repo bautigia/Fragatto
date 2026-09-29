@@ -429,5 +429,25 @@
       { "ml": 5, "tipo": "decant", "precio": 14490 }
     ],
     "destacado": false
+  },
+  {
+    "id": "al-qiam-gold",
+    "marca": "Lattafa Pride",
+    "nombre": "Al Qiam Gold",
+    "genero": "unisex",
+    "familia": "amaderado",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura frutal de frambuesa y azafrán, corazón de cuero y pachulí, y un fondo de oud, ámbar, benjuí, madera de guayaco y vetiver. Oscuro y especiado, con mucho cuerpo y poca timidez.",
+    "notas": {
+      "salida": ["Frambuesa", "Azafrán"],
+      "corazon": ["Cuero", "Pachulí"],
+      "fondo": ["Oud", "Ámbar", "Benjuí", "Madera de guayaco", "Vetiver"]
+    },
+    "imagen": "/images/productos/AlQiamGold1.jpg",
+    "imagenHover": "/images/productos/AlQiamGold2dafoto.jpg",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 9990 }
+    ],
+    "destacado": false
   }
 ]
