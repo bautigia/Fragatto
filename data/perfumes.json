@@ -449,5 +449,45 @@
       { "ml": 5, "tipo": "decant", "precio": 9990 }
     ],
     "destacado": false
+  },
+  {
+    "id": "liquid-brun",
+    "marca": "French Avenue",
+    "nombre": "Liquid Brun Limited Edition",
+    "genero": "unisex",
+    "familia": "ambarado",
+    "concentracion": "Extrait de Parfum",
+    "descripcion": "Apertura de cardamomo, lavanda y cítricos, corazón de azahar, madera de guayaco y rosa, y un fondo de vainilla, haba tonka, ámbar y musgo de roble. Fougère-oriental, cálido y profundo, edición limitada.",
+    "notas": {
+      "salida": ["Cardamomo", "Lavanda", "Cítricos"],
+      "corazon": ["Azahar", "Madera de guayaco", "Rosa"],
+      "fondo": ["Vainilla", "Haba tonka", "Ámbar", "Musgo de roble"]
+    },
+    "imagen": "/images/productos/LiquidBrun1.jpg",
+    "imagenHover": "/images/productos/LiquidBrun2dafoto.jpg",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 12990 }
+    ],
+    "destacado": false
+  },
+  {
+    "id": "ishq-al-shuyukh-gold",
+    "marca": "Lattafa Pride",
+    "nombre": "Ishq Al Shuyukh Gold",
+    "genero": "unisex",
+    "familia": "ambarado",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura de caramelo y azafrán, corazón de gamuza, cuero y haba tonka, y un fondo de vainilla, ámbar y almizcle. Intenso y envolvente, con un cuero que se vuelve suave y dulce.",
+    "notas": {
+      "salida": ["Caramelo", "Azafrán"],
+      "corazon": ["Gamuza", "Cuero", "Haba tonka"],
+      "fondo": ["Vainilla", "Ámbar", "Almizcle"]
+    },
+    "imagen": "/images/productos/IshqAlShuyukhGold1.jpg",
+    "imagenHover": "/images/productos/IshqAlShuyukhGold2dafoto.jpg",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 10990 }
+    ],
+    "destacado": false
   }
 ]
