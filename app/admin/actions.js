@@ -3,6 +3,14 @@
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
+import { FRASCO_REMOVIDO_SENTINEL } from "@/lib/overrides";
+
+function revalidarCatalogo() {
+  revalidatePath("/admin");
+  revalidatePath("/catalogo");
+  revalidatePath("/producto/[slug]", "page");
+  revalidatePath("/");
+}
 
 export async function signIn(prevState, formData) {
   if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
@@ -67,8 +75,37 @@ export async function updateFormato(formData) {
   );
   if (error) throw new Error(error.message);
 
-  revalidatePath("/admin");
-  revalidatePath("/catalogo");
-  revalidatePath("/producto/[slug]", "page");
-  revalidatePath("/");
+  revalidarCatalogo();
+}
+
+// Agregar un frasco completo nuevo se hace con el mismo updateFormato de
+// arriba (el admin carga ml=100, tipo="frasco completo" y un precio real).
+// Sacarlo es al revés: no podemos borrar una fila del JSON sin redeployar,
+// así que marcamos el override con un precio sentinel que lib/catalog.js
+// filtra al armar el catálogo (ver FRASCO_REMOVIDO_SENTINEL).
+export async function quitarFrascoCompleto(formData) {
+  const supabase = await createClient();
+  await requireUser(supabase);
+
+  const productoId = formData.get("productoId");
+  const ml = Number(formData.get("ml"));
+  const tipo = formData.get("tipo");
+  if (!productoId || !tipo || !Number.isFinite(ml)) {
+    throw new Error("Datos inválidos.");
+  }
+
+  const { error } = await supabase.from("formato_precio_stock").upsert(
+    {
+      producto_id: productoId,
+      ml,
+      tipo,
+      precio: FRASCO_REMOVIDO_SENTINEL,
+      stock: null,
+      updated_at: new Date().toISOString(),
+    },
+    { onConflict: "producto_id,ml,tipo" }
+  );
+  if (error) throw new Error(error.message);
+
+  revalidarCatalogo();
 }
