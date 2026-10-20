@@ -14,6 +14,8 @@ export default function ProductCard({ producto, mostrarPrecioFrasco = false }) {
   const glowRef = useRef(null);
   const { openQuickView } = useQuickView();
   const desde = precioDesde(producto);
+  // Sin precio en ningún formato todavía (recién cargado): no está agotado.
+  const proximamente = producto.formatos.every((f) => f.precio == null);
   const precioFrasco = mostrarPrecioFrasco ? precioFrascoCompleto(producto) : null;
 
   function handleClick(e) {
@@ -100,7 +102,7 @@ export default function ProductCard({ producto, mostrarPrecioFrasco = false }) {
           {producto.nombre}
         </h3>
         <p className="mt-1 text-xs text-ink-soft sm:text-sm">
-          {desde === null ? "Agotado" : `Desde ${formatPrecio(desde)}`}
+          {desde !== null ? `Desde ${formatPrecio(desde)}` : proximamente ? "Próximamente" : "Agotado"}
         </p>
         {precioFrasco !== null && (
           <p className="text-xs text-ink-soft sm:text-sm">

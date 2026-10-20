@@ -489,5 +489,46 @@
       { "ml": 5, "tipo": "decant", "precio": 10990 }
     ],
     "destacado": false
+  },
+  {
+    "id": "momento",
+    "marca": "Riiffs",
+    "nombre": "Momento",
+    "genero": "unisex",
+    "familia": "amaderado",
+    "concentracion": "Extrait de Parfum",
+    "descripcion": "Apertura de azafrán, mandarina y azúcar, corazón de rosa damascena, oud y haba tonka, y un fondo de caramelo, ámbar amaderado y cedro. Dulce y amaderado, con un oud suavizado por la rosa y el caramelo.",
+    "notas": {
+      "salida": ["Azafrán", "Mandarina", "Azúcar"],
+      "corazon": ["Rosa damascena", "Oud", "Haba tonka"],
+      "fondo": ["Caramelo", "Ámbar amaderado", "Cedro"]
+    },
+    "imagen": "/images/productos/Momento1.jpg",
+    "imagenHover": "/images/productos/Momento2dafoto.jpg",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 11990 },
+      { "ml": 100, "tipo": "frasco completo", "precio": 115000 }
+    ],
+    "destacado": false
+  },
+  {
+    "id": "mercedes-benz-club-black",
+    "marca": "Mercedes-Benz",
+    "nombre": "Club Black",
+    "genero": "masculino",
+    "familia": "ambarado",
+    "concentracion": "Eau de Toilette",
+    "descripcion": "Apertura luminosa de bergamota, corazón de incienso y jazmín, y un fondo de vainilla, benjuí, ambroxan y maderas. Cálido y especiado, con la vainilla como protagonista. Ideal para la noche y los meses fríos.",
+    "notas": {
+      "salida": ["Bergamota"],
+      "corazon": ["Incienso", "Jazmín"],
+      "fondo": ["Vainilla", "Benjuí", "Ambroxan", "Maderas"]
+    },
+    "imagen": "/images/productos/ClubBlack1.jpg",
+    "imagenHover": "/images/productos/ClubBlack2dafoto.jpg",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 10990 }
+    ],
+    "destacado": false
   }
 ]
