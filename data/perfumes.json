@@ -530,5 +530,47 @@
       { "ml": 5, "tipo": "decant", "precio": 10990 }
     ],
     "destacado": false
+  },
+  {
+    "id": "hawas-fire",
+    "marca": "Rasasi",
+    "nombre": "Hawas For Him Fire",
+    "genero": "masculino",
+    "familia": "fresco",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura herbal de salvia, corazón de jazmín egipcio con notas marinas, y un fondo cálido de ámbar, ambergris y notas minerales. Acuático y aromático, con más calidez que el Hawas clásico.",
+    "notas": {
+      "salida": ["Salvia"],
+      "corazon": ["Jazmín egipcio", "Notas marinas"],
+      "fondo": ["Ámbar", "Ambergris", "Notas minerales"]
+    },
+    "imagen": "/images/productos/HawasFire1.jpg",
+    "imagenHover": "/images/productos/HawasFire2dafoto.jpg",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 10490 },
+      { "ml": 100, "tipo": "frasco completo", "precio": 100000 }
+    ],
+    "destacado": false
+  },
+  {
+    "id": "rayhaan-tropical-vibe",
+    "marca": "Rayhaan",
+    "nombre": "Tropical Vibe",
+    "genero": "unisex",
+    "familia": "afrutado",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura frutal de mango, piña y bergamota, corazón de flores blancas, coco cremoso y brisa marina, y un fondo de ámbar, sándalo, almizcle y vetiver. Frutal y veraniego, ideal para el calor.",
+    "notas": {
+      "salida": ["Mango", "Piña", "Bergamota"],
+      "corazon": ["Flores blancas", "Coco", "Brisa marina"],
+      "fondo": ["Ámbar", "Sándalo", "Almizcle", "Vetiver"]
+    },
+    "imagen": "/images/productos/TropicalVibe1.jpg",
+    "imagenHover": "/images/productos/TropicalVibe2dafoto.jpg",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 9990 },
+      { "ml": 100, "tipo": "frasco completo", "precio": 85000 }
+    ],
+    "destacado": false
   }
 ]
