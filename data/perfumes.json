@@ -572,5 +572,110 @@
       { "ml": 100, "tipo": "frasco completo", "precio": 85000 }
     ],
     "destacado": false
+  },
+  {
+    "id": "hawas-kobra",
+    "marca": "Rasasi",
+    "nombre": "Hawas For Him Kobra",
+    "genero": "masculino",
+    "familia": "fresco",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura cítrica de jengibre, bergamota y mandarina, corazón de canela, té verde y neroli, y un fondo de ámbar, almizcle y maderas. Fresco y especiado, elegante para el día a día.",
+    "notas": {
+      "salida": ["Jengibre", "Bergamota", "Mandarina"],
+      "corazon": ["Canela", "Té verde", "Neroli"],
+      "fondo": ["Ámbar", "Almizcle", "Maderas"]
+    },
+    "imagen": "/images/productos/HawasKobra1.jpg",
+    "imagenHover": "/images/productos/HawasKobra2dafoto.jpg",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 11990 },
+      { "ml": 100, "tipo": "frasco completo", "precio": 99990 }
+    ],
+    "destacado": false
+  },
+  {
+    "id": "rome-extradose",
+    "marca": "Mast Perfume",
+    "nombre": "Rome Extradose Pour Homme",
+    "genero": "masculino",
+    "familia": "fresco",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura cítrica de bergamota y limón, corazón de hoja de higuera, jazmín y manzana verde, y un fondo de guayaco, sándalo y ambergris. Fresco y verde, con un fondo amaderado limpio.",
+    "notas": {
+      "salida": ["Bergamota", "Limón"],
+      "corazon": ["Hoja de higuera", "Musgo blanco", "Jazmín", "Manzana verde"],
+      "fondo": ["Guayaco", "Sándalo", "Ambergris"]
+    },
+    "imagen": "/images/productos/RomeExtradose1.jpg",
+    "imagenHover": "/images/productos/RomeExtradose2dafoto.jpg",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 11990 },
+      { "ml": 100, "tipo": "frasco completo", "precio": 99990 }
+    ],
+    "destacado": false
+  },
+  {
+    "id": "rome-extradose-femme",
+    "marca": "Mast Perfume",
+    "nombre": "Rome Extradose Pour Femme",
+    "genero": "femenino",
+    "familia": "floral",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura de grosella negra, bergamota y pimienta rosa, corazón floral de jazmín, violeta y rosa con frambuesa, y un fondo cálido de vainilla, ámbar, cashmere y sándalo. Frutal y floral, con una base dulce y envolvente.",
+    "notas": {
+      "salida": ["Grosella negra", "Bergamota", "Pimienta rosa"],
+      "corazon": ["Jazmín", "Violeta", "Rosa", "Frambuesa"],
+      "fondo": ["Vainilla", "Ámbar", "Cashmere", "Sándalo"]
+    },
+    "imagen": "/images/productos/RomeExtradoseFemmeRosa1.jpg",
+    "imagenHover": "/images/productos/RomeExtradoseFemmeRosa2dafoto.jpg",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 12490 },
+      { "ml": 100, "tipo": "frasco completo", "precio": 104990 }
+    ],
+    "destacado": false
+  },
+  {
+    "id": "odyssey-mega",
+    "marca": "Armaf",
+    "nombre": "Odyssey Mega",
+    "genero": "masculino",
+    "familia": "fresco",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura cítrica de naranja, bergamota, limón y jengibre, corazón de piña, enebro y salvia, y un fondo de almizcle, haba tonka, cedro y vetiver. Fresco, frutal y muy versátil.",
+    "notas": {
+      "salida": ["Naranja", "Bergamota", "Limón", "Jengibre", "Menta"],
+      "corazon": ["Piña", "Enebro", "Salvia", "Geranio"],
+      "fondo": ["Almizcle", "Haba tonka", "Cedro", "Vetiver"]
+    },
+    "imagen": "/images/productos/OdysseyMega1.jpg",
+    "imagenHover": "/images/productos/OdysseyMega2dafoto.jpg",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 8990 },
+      { "ml": 100, "tipo": "frasco completo", "precio": 82990 }
+    ],
+    "destacado": false
+  },
+  {
+    "id": "9pm-rebel",
+    "marca": "Afnan",
+    "nombre": "9pm Rebel",
+    "genero": "unisex",
+    "familia": "afrutado",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura frutal de mandarina, piña y manzana verde, corazón de cedro, musgo de roble y vainilla, y un fondo de caramelo, maderas secas, ambergris y almizcle. Frutal y dulce, con mucha proyección.",
+    "notas": {
+      "salida": ["Mandarina", "Piña", "Manzana verde"],
+      "corazon": ["Cedro", "Musgo de roble", "Vainilla"],
+      "fondo": ["Caramelo", "Maderas secas", "Ambergris", "Almizcle"]
+    },
+    "imagen": "/images/productos/9pmRebel1.jpg",
+    "imagenHover": "/images/productos/9pmRebel2dafoto.jpg",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 12990 },
+      { "ml": 100, "tipo": "frasco completo", "precio": 114990 }
+    ],
+    "destacado": false
   }
 ]
