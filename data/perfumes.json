@@ -574,6 +574,69 @@
     "destacado": false
   },
   {
+    "id": "club-de-nuit-intense",
+    "marca": "Armaf",
+    "nombre": "Club de Nuit Intense Man",
+    "genero": "masculino",
+    "familia": "amaderado",
+    "concentracion": "Eau de Toilette",
+    "descripcion": "Apertura frutal de piña, limón, grosella negra, manzana y bergamota, corazón ahumado de abedul con jazmín y rosa, y un fondo de almizcle, ambergris, pachulí y vainilla. Ahumado y frutal, con muchísima presencia.",
+    "notas": {
+      "salida": ["Piña", "Limón", "Grosella negra", "Manzana", "Bergamota"],
+      "corazon": ["Abedul", "Jazmín", "Rosa"],
+      "fondo": ["Almizcle", "Ambergris", "Pachulí", "Vainilla"]
+    },
+    "imagen": "/images/productos/CDNIntense1.jpg",
+    "imagenHover": "/images/productos/CDNIntense2dafoto.jpg",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 11000 },
+      { "ml": 105, "tipo": "frasco completo", "precio": 90000 }
+    ],
+    "destacado": false
+  },
+  {
+    "id": "afnan-rare-carbon",
+    "marca": "Afnan",
+    "nombre": "Rare Carbon",
+    "genero": "masculino",
+    "familia": "amaderado",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura de cuero, hoja de violeta, canela y nuez moscada, corazón de rosa, violeta, cedro y oud, y un fondo de vetiver, sándalo y ámbar. Oscuro y especiado, con un cuero elegante que dura todo el día.",
+    "notas": {
+      "salida": ["Cuero", "Hoja de violeta", "Canela", "Nuez moscada"],
+      "corazon": ["Rosa", "Violeta", "Cedro", "Oud"],
+      "fondo": ["Vetiver", "Sándalo", "Ámbar"]
+    },
+    "imagen": "/images/productos/AfnanCarbon1.jpg",
+    "imagenHover": "/images/productos/AfnanCarbon2dafoto.jpg",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 11990 },
+      { "ml": 100, "tipo": "frasco completo", "precio": 109990 }
+    ],
+    "destacado": false
+  },
+  {
+    "id": "emper-stallion-53",
+    "marca": "Emper",
+    "nombre": "Stallion 53",
+    "genero": "unisex",
+    "familia": "amaderado",
+    "concentracion": "Eau de Parfum",
+    "descripcion": "Apertura de cardamomo y violeta, corazón de iris y ámbar, y un fondo de sándalo, cuero, papiro y cedro. Amaderado, cremoso y un poco ahumado, para usar todos los días.",
+    "notas": {
+      "salida": ["Cardamomo", "Violeta"],
+      "corazon": ["Iris", "Ámbar"],
+      "fondo": ["Sándalo", "Cuero", "Papiro", "Cedro"]
+    },
+    "imagen": "/images/productos/Stallion531.jpg",
+    "imagenHover": "/images/productos/Stallion532dafoto.jpg",
+    "formatos": [
+      { "ml": 5, "tipo": "decant", "precio": 10490 },
+      { "ml": 100, "tipo": "frasco completo", "precio": 84990 }
+    ],
+    "destacado": false
+  },
+  {
     "id": "hawas-kobra",
     "marca": "Rasasi",
     "nombre": "Hawas For Him Kobra",
